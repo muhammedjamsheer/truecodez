@@ -1,0 +1,490 @@
+<div class="row">
+  <div class="col-12">
+    <div class="card mt-3 tab-card">
+
+      <div class="card-header tab-card-header">
+        <ul class="nav nav-tabs card-header-tabs" id="myTab" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link" id="one-tab" data-toggle="tab" href="#one" role="tab" aria-controls="One"
+              aria-selected="true">Introduction</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="two-tab" data-toggle="tab" href="#two" role="tab" aria-controls="Two"
+              aria-selected="false">Components</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="three-tab" data-toggle="tab" href="#three" role="tab" aria-controls="Three"
+              aria-selected="false">Data Binding</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="four-tab" data-toggle="tab" href="#four" role="tab" aria-controls="Four"
+              aria-selected="false">Directives</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="five-tab" data-toggle="tab" href="#five" role="tab" aria-controls="Five"
+              aria-selected="false">Pipes</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active p-3" id="one" role="tabpanel" aria-labelledby="one-tab">
+          <h5>Angular8</h5>
+          <p>Angular 8 is an open-source, client-side TypeScript based JavaScript framework.</p>
+          <p>Angular is one of the best frameworks for developing any Single Page Application</p>
+
+          <h6> Features and Advantages of Angular 8</h6>
+          <ul>
+            <li>Support TypeScript 3.4</li>
+            <li>Lazy loading</li>
+          </ul>
+          <h6> Project Folder Structure</h6>
+          <p>1.<strong>e2e</strong> - This folder is for an end to end testing purposes. It contains the configuration
+            files related to performing the unit test of the projects.</p>
+          <p>2.<strong>node_modules</strong> - This folder contains the downloaded packages as per the configuration.
+          </p>
+          <p>3.<strong>src</strong> - Tt is the folder which contains the main code files related to our angular application. It contains 3 subfolders as
+          </p>
+          <ul>
+            <li><strong>app</strong> - App folder contains the Angular project-related files like components, HTML
+              files, etc.</li>
+            <li><strong>assets </strong> - Assets folder contains any static files like images, stylesheets, custom
+              javascript library files etc.</li>
+            <li><strong>environments </strong> - Environments folder contains the environment-related files which are
+              required during deployment or build of the projects..</li>
+          </ul>
+          <h6>3 different configuration files</h6>
+          <p>1.<strong>tsconfig.json</strong> - If tsconfig.json files exist within the project root folder, that means
+            that the project is a basically TypeScript project
+          </p>
+          <p>2.<strong>package.json</strong> - package.json is basically a JSON file that contains all information
+            related to the required packages for the project. Also, with the help of this configuration files, we can
+            maintain the Project Name and its related version by using the “name” and “version” property
+          </p>
+          <p>3.<strong>angular.json</strong> - angular.json file is an Angular Application Environment based JSON file
+            which contains all the information related to the project build and deployment. It tells the system which
+            files need to change when we use ng build or ng serve command.
+          </p>
+          <p>4.<strong>angular.json</strong> - This is the main ts file that will run; first,  It is mainly used to define the global configurations.
+          </p>
+          <p>4.<strong>styles.css</strong> -  It is the angular application uses a global CSS.
+          </p>
+        </div>
+
+        <div class="tab-pane fade p-3" id="two" role="tabpanel" aria-labelledby="two-tab">
+          <h5 class="card-title">Components</h5>
+          <p>In Angular, components are the basic building blocks, which control a part of the UI for any application.
+          </p>
+          <p>A component is defined using the @Component decorator.</p>
+          <p>Every component consists of three parts, the template which loads the view for the component, a stylesheet
+            which defines the look and feel for the component, and a class that contains the business logic for the
+            component.</p>
+
+          <p class="strong">Default Code:</p>
+
+          <ngx-prism language="javascript">
+            {{components_ts}}
+          </ngx-prism>
+          <p class="strong">@Component Metadata</p>
+          <p>when we want to create any new component, we need to use the @Component decorator</p>
+          <p>@Component decorator basically classifies a TypeScript class as a component object</p>
+          <p>Actually, @Component decorator is a function that takes different types of parameters</p>
+          The most commonly used properties of the @Component decorator are as follows:
+
+          <ul class="lists">
+            <lI><span class="strong">selector - </span> It specifies the tag that can be used to call this component in HTML templates just like the standard HTML tags</lI>
+            <lI><span class="strong">templateUrl - </span>It indicates the path of the HTML template that will be used to display this component.</lI>
+            <lI><span class="strong">styleUrls - </span>It specifies an array of URLs for CSS style-sheet in the component</lI>
+            <lI><span class="strong">template -  </span>The template is the part of the component which is rendered in the browser. In this property, we can pass the HTML tags or code directly as inline code</lI>
+            <lI><span class="strong">providers - </span>it is used inject different types of custom services within the component to implement the business logic for the component</lI>
+          </ul>
+
+          <h6>Life Cycle of a Component</h6>
+          <ul>
+            <li><strong>ngOnChanges</strong> -This event executes every time a value of an input control within the
+              component has been changed. This event activates first when the value of a bound property has been
+              changed.</li>
+            <li><strong>ngOnInit</strong> -This event executed at the time of Component initialization. This event is
+              called only once, just after the ngOnChanges() events. This event is mainly used to initialize data in a
+              component.</li>
+            <li><strong>ngDoCheck </strong> -This event is executed every time when the input properties of a component
+              are checked..</li>
+            <li><strong>ngAfterViewInit</strong> - This life cycle method executes when the component completes the
+              rendering of its view full.</li>
+            <li><strong>ngOnDestroy </strong>- This method will be executed when we want to destroy the Angular
+              components.This hook can be used to clean up the code and detach event handlers.</li>
+          </ul>
+        </div>
+
+
+
+
+        <div class="tab-pane fade p-3" id="three" role="tabpanel" aria-labelledby="three-tab">
+          <h5>Data Binding</h5>
+          <p><strong>Types of Data Binding</strong> </p>
+          <h6>1.One-way Data Binding</h6>
+          <p>One-way data binding will bind the data from the component to the view (DOM) or from view to the component.
+            One-way data binding is unidirectional.</p>
+          <ul>
+            <lI>Interpolation</lI>
+            <lI>Property Binding</lI>
+            <lI>Event Binding</lI>
+            <lI>Class Binding</lI>
+            <lI>Style Binding</lI>
+          </ul>
+
+
+
+          <div class="card">
+            <div class="card-header"> <strong>Interpolation</strong></div>
+            <div class="card-body">
+              <p>The data binding is done from component to the view.Interpolation uses the braces expression </p>
+              <p>Example</p>
+              component.ts
+              <ngx-prism language="javascript">
+                {{Interpolationts}}
+              </ngx-prism>
+              component.html
+              <ngx-prism language="html">
+                {{Interpolationhtml}}
+              </ngx-prism>
+              <p>Output</p>
+              <div>Current Number is {{value1}}</div>
+              <div>Current Number is {{value1 | currency}}</div>
+              <div>Current Number is {{dt1}}</div>
+              <div>Current Number is {{dt1 | date}}</div>
+              <div>Status is {{status}}</div>
+              <div>{{status ? "This is correct status" :"This is false status"}}</div>
+              <div>{{returnString()}}</div>
+            </div>
+          </div>
+
+
+          <div class="card">
+            <div class="card-header"> <strong>Property binding</strong></div>
+            <div class="card-body">
+              <p>In property binding, we bind a property of a DOM element to a field which is a defined property in our
+                component TypeScript code. </p>
+              <p>Example</p>
+              component.ts
+              <ngx-prism language="javascript">
+                {{propertyts}}
+              </ngx-prism>
+              component.html
+              <ngx-prism language="html">
+                {{propertyhtml}}
+              </ngx-prism>
+              <p>Output</p>
+              <img [src]="imgUrl" [ngStyle]="{ 'width': '150px','height': '100px'}" />
+              <label>Name: </label>
+              <input type="text" [value]="name">
+            </div>
+          </div>
+
+
+
+          <div class="card">
+            <div class="card-header"> <strong>Event Binding</strong></div>
+            <div class="card-body">
+              <p>Event binding is a data-binding from an element to a component. User actions such as keystrokes, mouse
+                movement, clicks.</p>
+              <p>It is one-way data binding and sends information from the view to the component class. It is opposite
+                of
+                property binding.</p>
+              <p>Example</p>
+              component.html
+              <ngx-prism language="html">
+                {{eventhtml}}
+              </ngx-prism>
+              component.ts
+              <ngx-prism language="javascript">
+                {{eventts}}
+              </ngx-prism>
+              <p>Output</p>
+              <div>
+                <button class="btn btn-info mr-2" (click)="showAlert()">Click Here</button>
+                <button class="btn btn-warning" (mouseenter)="showAlert()">Hover Here</button>
+              </div>
+              <br />
+              <p>Angular 8/9 Event List </p>
+              <ngx-prism language="html">
+                {{EventList}}
+              </ngx-prism>
+            </div>
+          </div>
+
+
+          <div class="card">
+            <div class="card-header"> <strong>Style Binding</strong></div>
+            <div class="card-body">
+              <p>Example</p>
+              component.html
+              <ngx-prism language="html">
+                {{stylecontent}}
+              </ngx-prism>
+            </div>
+          </div>
+
+
+          <div class="card">
+            <div class="card-header"> <strong>Class Binding</strong></div>
+            <div class="card-body">
+              <p>If you wish to add or remove entire classes that are defined in your CSS, you can do this with class
+                binding..</p>
+              <p>Example</p>
+              component.html
+              <ngx-prism language="html">
+                {{classcontent}}
+              </ngx-prism>
+              component.css
+              <ngx-prism language="css">
+                {{csscontent}}
+              </ngx-prism>
+              component.ts
+              <ngx-prism language="javascript">
+                {{componentts}}
+              </ngx-prism>
+            </div>
+          </div>
+          <br />
+          <h6>2.Two-Way Data Binding</h6>
+          <p>In two way data binding, property binding and event binding are combined together.</p>
+          <p>Two-way data binding in Angular will help users to exchange data from the component to view and from view
+            to the component.</p>
+          <p>Example</p>
+          component.html
+          <ngx-prism language="html">
+            {{twowayhtml}}
+          </ngx-prism>
+          component.ts
+          <ngx-prism language="javascript">
+            {{twowayts}}
+          </ngx-prism>
+          Output
+
+          <div>
+            <span>Enter Your Email </span>
+            <input [(ngModel)]="email" type="text" />
+          </div>
+          <div>
+            <span>Your email :- </span>
+            <span>{{email}}</span>
+          </div>
+
+
+
+        </div>
+        <!-- IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII   Directives   IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII -->
+        <div class="tab-pane fade p-3" id="four" role="tabpanel" aria-labelledby="four-tab">
+          <h5 class="card-title">Directives</h5>
+          <p>Directives are instructions in the DOM. They specify how to place your components and business logic in the
+            Angular. </p>
+
+          <p>Directives are js class and declared as @directive. There are 3 directives in Angular.
+          </p>
+          <ul>
+            <li><strong>Component Directives</strong></li>
+            <li><strong>Structural Directives</strong></li>
+            <li><strong>Attribute Directives</strong></li>
+
+          </ul>
+
+          <div class="card">
+            <div class="card-header">Component Directives</div>
+            <div class="card-body">
+              <p> It forms the main class and is declared by @Component. It contains the details on component
+                processing, instantiated and usage at run time</p>
+
+              <p>Example: It contains certain parameters some of them are shown in this example.</p>
+              <ngx-prism language="javascript">
+                {{coponentdirectives}}
+              </ngx-prism>
+              <li><strong>Selector</strong> - Tells the template tag which specifies the beginning and end of the
+                component.</li>
+              <li><strong>templateURL</strong> - Consists of the template used for the component.</li>
+              <li><strong>styleUrls</strong> - It is of array type which consists of all the style format files used for
+                the template.</li>
+            </div>
+          </div>
+          <br />
+          <div class="card">
+            <div class="card-header">Structural Directives</div>
+            <div class="card-body">
+              <p> Structural directives start with a * sign. These directives are used to manipulate and change the
+                structure of the DOM elements. For example, *ngIf and *ngFor.</p>
+
+              <p class="strong">Example : *ngIf</p>
+              app.component.html
+              <ngx-prism language="html">
+                {{structuraldirectives_html_ngIf}}
+              </ngx-prism>
+              app.component.ts
+              <ngx-prism language="javascript">
+                {{structuraldirectives_ts_ngIf}}
+              </ngx-prism>
+              <strong>Demo</strong>
+              <br />
+              <div>
+                <button (click)="changeData()" class="btn btn-info mr-3">{{caption}}</button>
+                <span *ngIf="showInfo"><span>Demonstrate of Structural Directives </span></span>
+              </div>
+              <br />
+
+              <p class="strong">Example : *ngFor</p>
+              app.component.html
+              <ngx-prism language="html">
+                {{structuraldirectives_html_ngFor}}
+              </ngx-prism>
+              app.component.ts
+              <ngx-prism language="javascript">
+                {{structuraldirectives_ts_ngFor}}
+              </ngx-prism>
+
+              Demo
+              <div *ngFor="let day of Weekdays">
+                <ng-container *ngIf="(day == 'Saturday' || day == 'Sunday'); else elseTemplate">
+                  <p>{{day}} is a weekend</p>
+                </ng-container>
+                <ng-template #elseTemplate>
+                  <p>{{day}} is not a weekend</p>
+                </ng-template>
+              </div>
+
+              <p class="strong">Example : *ngSwitch</p>
+              app.component.html
+              <ngx-prism language="html">
+                {{structuraldirectives_html_ngSwitch}}
+              </ngx-prism>
+              app.component.ts
+              <ngx-prism language="javascript">
+                {{structuraldirectives_ts_ngSwitch}}
+              </ngx-prism>
+
+              Demo
+              <div>
+                <table style="width:50%;border:solid;border-color:blue;border-width:thin;">
+                  <thead>
+                    <tr>
+                      <td>Srl No</td>
+                      <td>Student Name</td>
+                      <td>Course</td>
+                      <td>Grade</td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor="let student of studentList;" [ngSwitch]="student.Grade">
+                      <td>
+                        <span *ngSwitchCase="'A'"
+                          [ngStyle]="{'font-size':'18px','color':'red'}">{{student.SrlNo}}</span>
+                        <span *ngSwitchCase="'B'"
+                          [ngStyle]="{'font-size':'16px','color':'blue'}">{{student.SrlNo}}</span>
+                        <span *ngSwitchCase="'C'"
+                          [ngStyle]="{'font-size':'14px','color':'green'}">{{student.SrlNo}}</span>
+                        <span *ngSwitchDefault [ngStyle]="{'font-size':'12px','color':'black'}">{{student.SrlNo}}</span>
+                      </td>
+                      <td>
+                        <span *ngSwitchCase="'A'" [ngStyle]="{'font-size':'18px','color':'red'}">{{student.Name}}</span>
+                        <span *ngSwitchCase="'B'"
+                          [ngStyle]="{'font-size':'16px','color':'blue'}">{{student.Name}}</span>
+                        <span *ngSwitchCase="'C'"
+                          [ngStyle]="{'font-size':'14px','color':'green'}">{{student.Name}}</span>
+                        <span *ngSwitchDefault [ngStyle]="{'font-size':'12px','color':'black'}">{{student.Name}}</span>
+                      </td>
+                      <td>
+                        <span *ngSwitchCase="'A'"
+                          [ngStyle]="{'font-size':'18px','color':'red'}">{{student.Course}}</span>
+                        <span *ngSwitchCase="'B'"
+                          [ngStyle]="{'font-size':'16px','color':'blue'}">{{student.Course}}</span>
+                        <span *ngSwitchCase="'C'"
+                          [ngStyle]="{'font-size':'14px','color':'green'}">{{student.Course}}</span>
+                        <span *ngSwitchDefault
+                          [ngStyle]="{'font-size':'12px','color':'black'}">{{student.Course}}</span>
+                      </td>
+                      <td>
+                        <span *ngSwitchCase="'A'"
+                          [ngStyle]="{'font-size':'18px','color':'red'}">{{student.Grade}}</span>
+                        <span *ngSwitchCase="'B'"
+                          [ngStyle]="{'font-size':'16px','color':'blue'}">{{student.Grade}}</span>
+                        <span *ngSwitchCase="'C'"
+                          [ngStyle]="{'font-size':'14px','color':'green'}">{{student.Grade}}</span>
+                        <span *ngSwitchDefault [ngStyle]="{'font-size':'12px','color':'black'}">{{student.Grade}}</span>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII   Directives   IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII -->
+        <div class="tab-pane fade p-3" id="five" role="tabpanel" aria-labelledby="five-tab">
+          <h5 class="card-title">Pipes</h5>
+          <p>Pipes are a useful feature in Angular. These are the simple way to transform values in an Angular template.
+            It takes the integers, strings, array, and dates as input separated with | to be converted in the format as
+            required and display same as an in the browser.
+          </p>
+          <p class="strong">Syntax:</p>
+          <ngx-prism language="html">
+            {{pipessyntax}}
+          </ngx-prism>
+          <p class="strong">Examples</p>
+          app.component.ts
+          <ngx-prism language="javascript">
+            {{pipes_ts_string}}
+          </ngx-prism>
+          app.component.html
+          <ngx-prism language="html">
+            {{pipes_html_string}}
+          </ngx-prism>
+
+          <p class="strong">Demo</p>
+
+          <div>   
+            <h6>Date Pipes</h6>  
+            Full Date : {{todayDate}}<br />  
+            Short Date : {{todayDate | date:'shortDate'}}<br />  
+            Medium Date : {{todayDate | date:'mediumDate'}}<br />  
+            Full Date : {{todayDate | date:'fullDate'}}<br />  
+            Time : {{todayDate | date:'HH:MM'}}<br />  
+            Time : {{todayDate | date:'hh:mm:ss a'}}<br />  
+            Time : {{todayDate | date:'hh:mm:ss p'}}<br />  <br />  
+          
+            <h6>Number Pipes</h6>  
+            No Formatting : {{amount}}<br />  
+            2 Decimal Place : {{amount |number:'2.2-2'}}  <br />  <br />  
+          
+            <h6>Currency Pipes</h6>  
+            No Formatting : {{amount}}<br />  
+            USD Doller($) : {{amount |currency:'USD':true}}<br />  
+            USD Doller : {{amount |currency:'USD':false}}<br />  
+            INR() : {{amount |currency:'INR':true}}<br />  
+            INR : {{amount |currency:'INR':false}}<br /> <br />   
+          
+            <h6>String Related Pipes</h6>  
+            Actual Message : {{message}}<br />  
+            Lower Case : {{message | lowercase}}<br />  
+            Upper Case : {{message | uppercase}}<br /> <br />   
+          
+            <h6> Percentage Pipes</h6>  
+            2 Place Formatting : {{amount | percent :'.2'}}<br /><br />   
+        </div>
+      
+
+
+
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+      </div>
+    </div>
+  </div>
