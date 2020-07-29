@@ -2,9 +2,9 @@
  //@import '~prismjs/themes/prism-coy.css';
  //@import '~prismjs/themes/prism-okaidia.css';
  //@import '~prismjs/themes/prism-solarizedlight.css';
- //@import '~prismjs/themes/prism-tomorrow.css';
+ @import '~prismjs/themes/prism-tomorrow.css';
 //@import '~prismjs/themes/prism-twilight.css';
-@import '~prismjs/themes/prism.css';
+//@import '~prismjs/themes/prism.css';
 body{
    background-color: #e6f3f0 ;
    font-size: 15px !important;
@@ -14,4 +14,12 @@ body{
 }
 .strong{
     font-weight: bold;
+}
+.pagelayout{
+    margin: 30px 200px;
+    .header{
+        color: #930404;
+        font-weight: bold;
+        font-size: 20px;
+        }
 }

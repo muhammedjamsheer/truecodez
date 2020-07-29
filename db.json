@@ -1,0 +1,102 @@
+{
+  "students": [
+    {
+      "id": 1,
+      "name": "Enola Rowe",
+      "class": "tony@mcu.com",
+      "address": "131 Oswaldo Street"
+    },
+    {
+      "id": 2,
+      "name": "Timmothy Lueilwitz",
+      "age": "15",
+      "address": "37137 Abbigail Lock"
+    },
+    {
+      "id": 3,
+      "name": "Madilyn Pacocha",
+      "age": "14",
+      "address": "094 Morris Plains"
+    },
+    {
+      "id": 4,
+      "name": "Harley Cremin",
+      "age": "17",
+      "address": "14855 Cathy Square"
+    },
+    {
+      "id": 5,
+      "name": "Juana Ziemann",
+      "age": "16",
+      "address": "612 Dayana Stream"
+    }
+  ],
+  "states": [
+    {
+      "id": 1,
+      "name": "Kerala"
+    },
+    {
+      "id": 2,
+      "name": "Tamil Nadu"
+    },
+    {
+      "id": 3,
+      "name": "Karnataka"
+    },
+    {
+      "id": 4,
+      "name": "Maharashtra"
+    }
+  ],
+  "Languages": [
+    {
+      "id": 1,
+      "name": "English"
+    },
+    {
+      "id": 2,
+      "name": "Hindi"
+    },
+    {
+      "id": 3,
+      "name": "Malayalam"
+    },
+    {
+      "id": 4,
+      "name": "Tamil"
+    }
+  ],
+  "User": [
+    {
+      "name": "muhammed",
+      "email": "jamsheer@mail.com",
+      "mobile": 8592947647,
+      "state": 1,
+      "id": 1
+    },
+    {
+      "name": "Ansilpp",
+      "email": "ansil@mail.com",
+      "mobile": 8592947647,
+      "state": 2,
+      "gender": "male",
+      "acceptTerms": true,
+      "id": 2
+    },
+    {
+      "name": "Muhammed Nasik",
+      "email": "Nasik@mail.com",
+      "mobile": 9695989693,
+      "state": 3,
+      "gender": "male",
+      "languages": [
+        "1",
+        "2",
+        "3"
+      ],
+      "acceptTerms": true,
+      "id": 3
+    }
+  ]
+}

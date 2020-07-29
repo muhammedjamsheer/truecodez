@@ -1,60 +1,68 @@
-<div class="card">
-    <div class="card-header">
-        <h6>Toaster Notification in Angular 8</h6>
-    </div>
-    <div class="card-body">
-
-        <div class="button-example">
-            <div class="row">
-                <div class="col-lg-2"><button (click)="showToasterSuccess()" class="btn btn-success btn-block">Success</button></div>
-                <div class="col-lg-2"><button (click)="showToasterError()" class="btn btn-danger btn-block">Danger</button></div>
-                <div class="col-lg-2"><button (click)="showToasterWarning()" class="btn btn-warning  btn-block">Warning</button></div>
-                <div class="col-lg-2"><button (click)="showToasterInfo()" class="btn btn-info  btn-block">Info</button></div>
-            </div>
+<div class="pagelayout">
+    <div class="card">
+        <div class="card-header">
+            <h6>Toaster Notification in Angular 8</h6>
         </div>
-        <p class="strong">Step 1 : Install Toastr</p>
-        <p> Run below command in terminal</p>
-        <ngx-prism language="html">
-            {{code1}}
-        </ngx-prism>
-        <ngx-prism language="html">
-            {{code2}}
-        </ngx-prism>
-        <p>Now, we need to include toastr css like "node_modules/ngx-toastr/toastr.css", so let's add it on angular.json
-            file.</p>
-        <p class="strong">angular.json</p>
-        <ngx-prism language="javascript">
-            {{code3}}
-        </ngx-prism>
-        <p class="strong">Step 2 : Import Module</p>
-        In this step, we need to import ToastrModule and BrowserAnimationsModule to app.module.ts file
-        <p class="strong">src/app/app.module.ts</p>
-        <ngx-prism language="javascript">
-            {{code4}}
-        </ngx-prism>
+        <div class="card-body">
 
-        <p class="strong">Step 3 : Create Service for Notification</p>
-        <p>Here, we will create separate notification for Toastr. so you can use showSuccess(), showError(), showInfo()
-            and showWarning() in any component.</p>
-        <p class="strong">src/app/notification.service.ts</p>
-        <ngx-prism language="javascript">
-            {{code5}}
-        </ngx-prism>
+            <div class="button-example">
+                <div class="row">
+                    <div class="col-lg-2"><button (click)="showToasterSuccess()"
+                            class="btn btn-success btn-block">Success</button></div>
+                    <div class="col-lg-2"><button (click)="showToasterError()"
+                            class="btn btn-danger btn-block">Danger</button></div>
+                    <div class="col-lg-2"><button (click)="showToasterWarning()"
+                            class="btn btn-warning  btn-block">Warning</button></div>
+                    <div class="col-lg-2"><button (click)="showToasterInfo()"
+                            class="btn btn-info  btn-block">Info</button></div>
+                </div>
+            </div>
+            <p class="strong">Step 1 : Install Toastr</p>
+            <p> Run below command in terminal</p>
+            <ngx-prism language="html">
+                {{code1}}
+            </ngx-prism>
+            <ngx-prism language="html">
+                {{code2}}
+            </ngx-prism>
+            <p>Now, we need to include toastr css like "node_modules/ngx-toastr/toastr.css", so let's add it on
+                angular.json
+                file.</p>
+            <p class="strong">angular.json</p>
+            <ngx-prism language="javascript">
+                {{code3}}
+            </ngx-prism>
+            <p class="strong">Step 2 : Import Module</p>
+            In this step, we need to import ToastrModule and BrowserAnimationsModule to app.module.ts file
+            <p class="strong">src/app/app.module.ts</p>
+            <ngx-prism language="javascript">
+                {{code4}}
+            </ngx-prism>
 
-        <p class="strong">Step 4 : Updated View File</p>
-        <p>Now here, we will updated our html file. we will create simple four buttons for alert messages.</p>
-        <p class="strong">src/app/app.component.html</p>
-        <ngx-prism language="html">
-            {{code6}}
-        </ngx-prism>
+            <p class="strong">Step 3 : Create Service for Notification</p>
+            <p>Here, we will create separate notification for Toastr. so you can use showSuccess(), showError(),
+                showInfo()
+                and showWarning() in any component.</p>
+            <p class="strong">src/app/notification.service.ts</p>
+            <ngx-prism language="javascript">
+                {{code5}}
+            </ngx-prism>
+
+            <p class="strong">Step 4 : Updated View File</p>
+            <p>Now here, we will updated our html file. we will create simple four buttons for alert messages.</p>
+            <p class="strong">src/app/app.component.html</p>
+            <ngx-prism language="html">
+                {{code6}}
+            </ngx-prism>
 
 
-        <p class="strong">Step 4 : Use Component ts File</p>
-        <p>Now we need to update our component.ts file here we will use notification service and call alert.</p>
-        <p class="strong">src/app/app.component.ts</p>
-        <ngx-prism language="javascript">
-            {{code7}}
-        </ngx-prism>
+            <p class="strong">Step 4 : Use Component ts File</p>
+            <p>Now we need to update our component.ts file here we will use notification service and call alert.</p>
+            <p class="strong">src/app/app.component.ts</p>
+            <ngx-prism language="javascript">
+                {{code7}}
+            </ngx-prism>
 
+        </div>
     </div>
 </div>

@@ -1,0 +1,222 @@
+<div class="pagelayout">
+    <div class="card">
+        <div class="card-header">
+            <h6>Angular Reactive Forms</h6>
+        </div>
+        <div class="card-body">
+            <h6 class="header">1.Import ReactiveFormsModule</h6>
+            <p><strong>ReactiveFormsModule</strong> provides the required classes and directive to create reactive form.
+            </p>
+            <ngx-prism language="javascript">
+                {{codes.appmodule}}
+            </ngx-prism>
+
+            <h6 class="header">2.Create Reactive Form</h6>
+            <p>Find some Angular classes that are used in creating reactive form.</p>
+
+            <ul>
+                <li>
+                    <p><strong>FormControl: </strong> Tracks the value and validation state of a form control.</p>
+                </li>
+                <li>
+                    <p><strong>FormGroup: </strong> Tracks the value and validity state of a group of FormControl.</p>
+                </li>
+                <li>
+                    <p><strong>FormArray: </strong> Tracks the value and validity state of array of FormControl,
+                        FormGroup and
+                        FormArray.</p>
+                </li>
+                <li>
+                    <p><strong>FormBuilder: </strong> Creates a big reactive form with minimum code in Angular. </p>
+                    <p>FormBuilder has
+                        methods as group(), control() and array() that returns FormGroup, FormControl and FormArray
+                        respectively.</p>
+
+                </li>
+            </ul>
+
+            <h6 class="header">3.FormBuilder - Reactive form</h6>
+            <p>Find the sample example to create a form with <strong>FormBuilder</strong> using its group() method.</p>
+
+            <strong>app.component.ts</strong>
+            <ngx-prism language="javascript">
+                {{codes.formbuilder_ts}}
+            </ngx-prism>
+
+            <strong>app.component.html</strong>
+            <ngx-prism language="html">
+                {{codes.formbuilder_html}}
+            </ngx-prism>
+
+            <h6 class="header">4.Create Reactive Form with Validations</h6>
+
+            <ngx-prism language="javascript">
+                {{codes.formValidations_ts}}
+            </ngx-prism>
+
+            <h6 class="header">5.Reactive Form: Submit and Get Value</h6>
+            To submit the form we need to specify a method name using <strong>ngSubmit </strong> which will be executed
+            after form submit.
+
+            <ngx-prism language="html">
+                {{codes.formValidations_submit_html}}
+            </ngx-prism>
+            <p>Suppose we want to fetch value of userName. Our FormGroup instance is userForm. Now fetch value as
+                following.</p>
+
+            <ngx-prism language="javascript">
+                {{codes.formValidations_submit_ts}}
+            </ngx-prism>
+            <p>After form submits, we can fetch their values using FormGroup instance as following.</p>
+            <ngx-prism language="javascript">
+                {{codes.formValidations_submitted_ts}}
+            </ngx-prism>
+
+
+            <h6 class="header">6.Reactive Form: Set and Patch Value</h6>
+            <p> The FormGroup methods <strong>setValue</strong> and <strong>patchValue</strong> both sets the value in
+                form
+                controls of FormGroup.</p>
+
+
+            <p>The setValue sets the value in each and every form control of FormGroup. We cannot omit any form control
+                in setValue</p>
+            <p>but when we want to assign only few form controls of FormGroup then we need to use patchValue</p>
+            <p>Find the sample example of patchValue.</p>
+            <ngx-prism language="javascript">
+                {{codes.formValidations_patchvalue}}
+            </ngx-prism>
+            <p>In the same way we can use setValue.</p>
+            <ngx-prism language="javascript">
+                {{codes.formValidations_setvalue}}
+            </ngx-prism>
+
+
+            <h6 class="header">7.Reactive Form Reset</h6>
+            <p> To reset reactive form, FormGroup provides <strong>reset()</strong> method. We can call reset() method
+                on the instance of FormGroup. Suppose we have following form with a button that will call a component
+                method</p>
+
+
+            <ngx-prism language="html">
+                {{codes.reactiveform_reset_html}}
+            </ngx-prism>
+
+            <ngx-prism language="javascript">
+                {{codes.reactiveform_reset_ts}}
+            </ngx-prism>
+            <p>We can also reset our form using reset button.</p>
+            <ngx-prism language="html">
+                {{codes.reactiveform_reset_button}}
+            </ngx-prism>
+
+
+            <h6 class="header">8.Complete Example</h6>
+            <div class="card" style="width:600px;">
+                <div class="card-header">
+                    <h6>User Information</h6>
+                </div>
+                <form [formGroup]="userForm" (ngSubmit)="onFormSubmit()">
+                    <div class="card-body">
+                        <div class="row form-group">
+                            <div class="col-lg-4">Name</div>
+                            <div class="col-lg-8">
+                                <input type="text" formControlName="name" class="form-control">
+                                <div *ngIf="submitted && f.name.errors" class="text-danger">
+                                    <div *ngIf="f.name.errors.required"> Name is required</div>
+                                    <div *ngIf="f.name.errors.minlength">Name must be at least 6 characters</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <div class="col-lg-4">Email</div>
+                            <div class="col-lg-8">
+                                <input type="text" formControlName="email" class="form-control">
+                                <div *ngIf="submitted && f.email.errors" class="text-danger">
+                                    <div *ngIf="f.email.errors.required">Email is required</div>
+                                    <div *ngIf="f.email.errors.email">Email must be a valid email address</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <div class="col-lg-4">Mobile</div>
+                            <div class="col-lg-8">
+                                <input type="number" formControlName="mobile" class="form-control">
+                                <div *ngIf="submitted && f.mobile.errors" class="text-danger">
+                                    <div *ngIf="f.mobile.errors.required">Mobile is required</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <div class="col-lg-4">State</div>
+                            <div class="col-lg-8">
+                                <select formControlName="state" (change)="onStateChange()" class="form-control">
+                                    <option [ngValue]="null" F hidden>Choose your profile</option>
+                                    <option *ngFor="let state of states" [ngValue]="state.id">
+                                        {{ state.name }}
+                                    </option>
+                                </select>
+                                <div *ngIf="submitted && f.state.errors" class="text-danger">
+                                    <div *ngIf="f.state.errors.required">State is required</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <div class="col-lg-4">Gender</div>
+                            <div class="col-lg-8">
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" value="male" formControlName="gender">
+                                    <label class="form-check-label">Male</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" value="female"
+                                        formControlName="gender">
+                                    <label class="form-check-label">Female</label>
+                                </div>
+                                <div *ngIf="submitted && f.gender.errors" class="text-danger">
+                                    <div *ngIf="f.gender.errors.required">Gender is required</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <div class="col-lg-4">Languages </div>
+                            <div class="col-lg-8">
+                                <div *ngFor="let lang of languages; let i=index" class="form-check form-check-inline">
+                                    <label>
+                                        <input type="checkbox" [value]="lang.id" (change)="onCheckboxChange($event)" />
+                                        {{lang.name}}
+                                    </label>
+                                </div>
+                                <div *ngIf="submitted && f.languages.errors" class="text-danger"> Checkbox is required,
+                                    select atleast one value.</div>
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <div class="col-lg-4">Accept T & C </div>
+                            <div class="col-lg-8">
+                                <input type="checkbox" formControlName="acceptTerms">
+                                <div *ngIf="submitted && f.acceptTerms.errors" class="text-danger">Accept Ts & Cs is
+                                    required</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn btn-info" style="width:100px;">Save</button>&nbsp;
+                        <button (click)="resetForm(userForm)" class="btn btn-danger" style="width:100px;">Reset</button>
+                    </div>
+                </form>
+            </div>
+
+            <p><strong>app.component.html</strong></p>
+            <ngx-prism language="html">
+                {{codes.reactiveform_demo_html}}
+            </ngx-prism>
+
+            <p><strong>app.component.ts</strong></p>
+            <ngx-prism language="javascript">
+                {{codes.reactiveform_demo_ts}}
+            </ngx-prism>
+
+        </div>
+    </div>
+</div>

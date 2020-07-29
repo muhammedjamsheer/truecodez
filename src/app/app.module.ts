@@ -7,7 +7,7 @@ import { HeaderComponent } from './header/header.component';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
-
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -20,6 +20,7 @@ import { ToastrModule } from 'ngx-toastr';
     FormsModule,
     BrowserAnimationsModule,
     ToastrModule.forRoot(),
+    HttpClientModule
     
   ],
   providers: [],

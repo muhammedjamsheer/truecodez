@@ -1,0 +1,47 @@
+<div class="pagelayout">
+    <div class="card">
+        <div class="card-header">
+            <h6> Angular 8 CRUD in Reactive form</h6>
+        </div>
+        <div class="card-body">
+            <h6 class="header">Setup Angular Project</h6>
+            <ngx-prism language="html">
+                {{codes.createproject}}
+            </ngx-prism>
+
+            <h6 class="header">Import FormsModule, ReactiveFormsModule, HttpClientModule in app.module.ts </h6>
+            <ngx-prism language="javascript">
+                {{codes.appmodule}}
+            </ngx-prism>
+
+            <h6 class="header">Create Dummy Database using JSON Server </h6>
+            <p>Run the below command in the terminal.</p>
+            <ngx-prism language="html">
+                {{codes.jsonserver}}
+            </ngx-prism>
+            <p>Now place data.json file in folder API/data.json with following data:</p>
+            <ngx-prism language="javascript">
+                {{codes.jsondata}}
+            </ngx-prism>
+
+            <p>Running the server in two ways</p>
+            <strong>1. Direct Command execution</strong>
+            <p>You can run server response by running following NPM command:</p>
+            <ngx-prism language="javascript">
+                {{codes.jsondatanpm}}
+            </ngx-prism>
+            <strong>2.Adding json file manually in package.json</strong>
+            <p>In package.json, add the below code to run json-server with short code.</p>
+            <i>"json:server": "json-server --watch db.json",</i>
+            <ngx-prism language="javascript">
+                {{codes.jsondatanpm}}
+            </ngx-prism>
+            <p>Now, run the server</p>
+            <ngx-prism language="html">
+                {{codes.jsonserverrun}}
+            </ngx-prism>
+            <p>Your JSON Server will be running on port 3000. The below data will be shown in the terminal</p>
+            <i>http://localhost:3000/students</i>
+        </div>
+    </div>
+</div>

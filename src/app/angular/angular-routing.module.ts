@@ -9,6 +9,8 @@ import { ChildtoparentComponent } from './childtoparent/childtoparent.component'
 import { InterviewQuestionsComponent } from './interview-questions/interview-questions.component';
 import { SharingdataservicesComponent } from './sharingdataservices/sharingdataservices.component';
 import { ToasterNotificationsComponent } from './toaster-notifications/toaster-notifications.component';
+import { EmployeeListComponent } from './reactive-form/view/employee-crud/employee-list/employee-list.component';
+import { ReactiveFormTutorialComponent } from './reactive-form/view/reactive-form-tutorial/reactive-form-tutorial.component';
 const routes: Routes = [
   {
     path: '',
@@ -45,6 +47,14 @@ const routes: Routes = [
   {
     path: 'toaster-notification',
     component: ToasterNotificationsComponent
+  },
+  {
+    path: 'reactive-form-crud',
+    component: EmployeeListComponent
+  },
+  {
+    path: 'reactive-form',
+    component: ReactiveFormTutorialComponent
   }
 ];
 
