@@ -7,6 +7,8 @@ import { ParentComponent } from './parent/parent.component';
 import { ParenttochildComponent } from './parenttochild/parenttochild.component';
 import { ChildtoparentComponent } from './childtoparent/childtoparent.component';
 import { InterviewQuestionsComponent } from './interview-questions/interview-questions.component';
+import { SharingdataservicesComponent } from './sharingdataservices/sharingdataservices.component';
+import { ToasterNotificationsComponent } from './toaster-notifications/toaster-notifications.component';
 const routes: Routes = [
   {
     path: '',
@@ -35,6 +37,14 @@ const routes: Routes = [
   {
     path: 'interview-questions',
     component: InterviewQuestionsComponent
+  },
+  {
+    path: 'services-sharing-data',
+    component: SharingdataservicesComponent
+  },
+  {
+    path: 'toaster-notification',
+    component: ToasterNotificationsComponent
   }
 ];
 

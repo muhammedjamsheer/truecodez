@@ -11,8 +11,10 @@ import { ParenttochildComponent } from './parenttochild/parenttochild.component'
 import { ChildtoparentComponent } from './childtoparent/childtoparent.component';
 import { FormsModule } from '@angular/forms';
 import { InterviewQuestionsComponent } from './interview-questions/interview-questions.component';
+import { SharingdataservicesComponent } from './sharingdataservices/sharingdataservices.component';
+import { ToasterNotificationsComponent } from './toaster-notifications/toaster-notifications.component';
 @NgModule({
-  declarations: [HomeComponent, BasicsComponent, ChildComponent, ParentComponent, ParenttochildComponent, ChildtoparentComponent, InterviewQuestionsComponent],
+  declarations: [HomeComponent, BasicsComponent, ChildComponent, ParentComponent, ParenttochildComponent, ChildtoparentComponent, InterviewQuestionsComponent, SharingdataservicesComponent, ToasterNotificationsComponent],
   imports: [
     CommonModule,
     AngularRoutingModule,
