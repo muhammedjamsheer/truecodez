@@ -11,6 +11,7 @@ import { SharingdataservicesComponent } from './sharingdataservices/sharingdatas
 import { ToasterNotificationsComponent } from './toaster-notifications/toaster-notifications.component';
 import { EmployeeListComponent } from './reactive-form/view/employee-crud/employee-list/employee-list.component';
 import { ReactiveFormTutorialComponent } from './reactive-form/view/reactive-form-tutorial/reactive-form-tutorial.component';
+import { JsonserverSaveDataComponent } from './jsonserver-save-data/jsonserver-save-data.component';
 const routes: Routes = [
   {
     path: '',
@@ -55,6 +56,10 @@ const routes: Routes = [
   {
     path: 'reactive-form',
     component: ReactiveFormTutorialComponent
+  },
+  {
+    path: 'json-server',
+    component: JsonserverSaveDataComponent
   }
 ];
 

@@ -67,36 +67,30 @@
       "name": "Tamil"
     }
   ],
-  "User": [
+  "users": [
     {
-      "name": "muhammed",
-      "email": "jamsheer@mail.com",
-      "mobile": 8592947647,
-      "state": 1,
+      "name": "Pranav",
+      "email": "pranav@mail.com",
+      "mobile": 96321478,
+      "state": 2,
+      "gender": "male",
+      "languages": [
+        null
+      ],
+      "acceptTerms": true,
       "id": 1
     },
     {
-      "name": "Ansilpp",
-      "email": "ansil@mail.com",
-      "mobile": 8592947647,
+      "name": "Haniya123",
+      "email": "haniya@mail.com11",
+      "mobile": 96969696,
       "state": 2,
-      "gender": "male",
-      "acceptTerms": true,
-      "id": 2
-    },
-    {
-      "name": "Muhammed Nasik",
-      "email": "Nasik@mail.com",
-      "mobile": 9695989693,
-      "state": 3,
-      "gender": "male",
+      "gender": "female",
       "languages": [
-        "1",
-        "2",
-        "3"
+        "1"
       ],
       "acceptTerms": true,
-      "id": 3
+      "id": 2
     }
   ]
 }

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, FormControl, FormArray, Validators } from '@angular/forms';
 import { UserService } from '../../service/user.service';
-import { User } from '../../domain/user';
+import { User, State, Language } from '../../domain/user';
 
 @Component({
   selector: 'app-reactive-form-tutorial',
@@ -10,17 +10,20 @@ import { User } from '../../domain/user';
 })
 export class ReactiveFormTutorialComponent implements OnInit {
   codes: any = [];
+
   states: any;
   languages: any;
-
+  users: any;
+  userId: number = 0;
+  userdetails: any;
   userForm: FormGroup;
-  submitted = false;
+  submitted: boolean = false;
 
   constructor(
     private formBuilder: FormBuilder,
     private userService: UserService,
-
   ) { }
+
   ngOnInit(): void {
     this.userForm = this.formBuilder.group({
       name: ['', [Validators.required, Validators.minLength(6)]],
@@ -34,6 +37,7 @@ export class ReactiveFormTutorialComponent implements OnInit {
 
     this.getAllStates();
     this.getAllLanguages();
+    this.getAllUsers();
     this.getsamplecodes();
   }
   getAllStates() {
@@ -43,17 +47,21 @@ export class ReactiveFormTutorialComponent implements OnInit {
   }
   getAllLanguages() {
     this.userService.getAllLanguageList().subscribe(response => {
-      console.log(response);
       this.languages = response;
     })
   }
+  getAllUsers() {
+    this.userService.getAllUserList().subscribe(response => {
+      this.users = response;
+    })
+  }
   get f() { return this.userForm.controls; }
+
   resetForm(form: FormGroup) {
     form.reset();
   }
   onCheckboxChange(e) {
     const languages: FormArray = this.userForm.get('languages') as FormArray;
-
     if (e.target.checked) {
       languages.push(new FormControl(e.target.value));
     } else {
@@ -72,12 +80,44 @@ export class ReactiveFormTutorialComponent implements OnInit {
     if (this.userForm.invalid) {
       return;
     }
-    const employee: User = this.userForm.value;
-    this.userService.createUser(employee).subscribe(
-      () => {
+
+    const user: User = this.userForm.value;
+    if (this.userId == 0) {
+      this.userService.createUser(user).subscribe(response => {
+        this.getAllUsers();
+        this.userId = 0;
         this.userForm.reset();
-      }
-    );
+        this.submitted = false;
+      });
+    } else {
+      user.id = this.userId;
+      this.userService.updateUser(this.userId,user).subscribe(() => {
+        this.getAllUsers();
+        this.userId = 0;
+        this.userForm.reset();
+        this.submitted = false;
+      });
+    }
+  }
+
+  getUserDetails(id: number) {
+    this.userService.getUserDetails(id).subscribe(response => {
+      this.userdetails = response;
+      this.userId = this.userdetails.id
+      this.userForm.patchValue({
+        name: this.userdetails.name,
+        email: this.userdetails.email,
+        mobile: this.userdetails.mobile,
+        state: this.userdetails.state,
+        gender: this.userdetails.gender,
+        acceptTerms: this.userdetails.acceptTerms,
+      });
+    })
+  }
+  deleteUser(id: number) {
+    this.userService.deleteUser(id).subscribe(response => {
+      this.getAllUsers();
+    })
   }
 
 
@@ -186,104 +226,134 @@ resetForm(form: FormGroup) {
 `;
     this.codes.reactiveform_reset_button = `<button type="reset">Reset</button> `;
     this.codes.reactiveform_demo_html = `
-<div class="card" style="width:800px;">
-  <div class="card-header">
-  <h6>User Information</h6>
-  </div>
-  <form [formGroup]="userForm" (ngSubmit)="onFormSubmit()">
-      <div class="card-body">
-          <div class="row form-group">
-              <div class="col-lg-4">Name</div>
-              <div class="col-lg-8">
-                  <input type="text" formControlName="name" class="form-control">
-                  <div *ngIf="submitted && f.name.errors" class="text-danger">
-                      <div *ngIf="f.name.errors.required"> Name is required</div>
-                      <div *ngIf="f.name.errors.minlength">Name must be at least 6 characters</div>
-                  </div>
-              </div>
-          </div>
-          <div class="row form-group">
-              <div class="col-lg-4">Email</div>
-              <div class="col-lg-8">
-                  <input type="text" formControlName="email" class="form-control">
-                  <div *ngIf="submitted && f.email.errors" class="text-danger">
-                      <div *ngIf="f.email.errors.required">Email is required</div>
-                      <div *ngIf="f.email.errors.email">Email must be a valid email address</div>
-                  </div>
-              </div>
-          </div>
-          <div class="row form-group">
-              <div class="col-lg-4">Mobile</div>
-              <div class="col-lg-8">
-                  <input type="number" formControlName="mobile" class="form-control">
-                  <div *ngIf="submitted && f.mobile.errors" class="text-danger">
-                      <div *ngIf="f.mobile.errors.required">Mobile is required</div>
-                  </div>
-              </div>
-          </div>
-          <div class="row form-group">
-              <div class="col-lg-4">State</div>
-              <div class="col-lg-8">
-                  <select formControlName="state" (change)="onStateChange()" class="form-control">
-                      <option [ngValue]="null" F hidden>Choose your profile</option>
-                      <option *ngFor="let state of states" [ngValue]="state.id">
-                          {{ state.name }}
-                      </option>
-                  </select>
-                  <div *ngIf="submitted && f.state.errors" class="text-danger">
-                      <div *ngIf="f.state.errors.required">State is required</div>
-                  </div>
-              </div>
-          </div>
-          <div class="row form-group">
-              <div class="col-lg-4">Gender</div>
-              <div class="col-lg-8">
-                  <div class="form-check form-check-inline">
-                      <input class="form-check-input" type="radio" value="male" formControlName="gender">
-                      <label class="form-check-label">Male</label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                      <input class="form-check-input" type="radio" value="female" formControlName="gender">
-                      <label class="form-check-label">Female</label>
-                  </div>
-                  <div *ngIf="submitted && f.gender.errors" class="text-danger">
-                      <div *ngIf="f.gender.errors.required">Gender is required</div>
-                  </div>
-              </div>
-          </div>
-          <div class="row form-group">
-              <div class="col-lg-4">Languages </div>
-              <div class="col-lg-8">
-                  <div *ngFor="let lang of languages; let i=index" class="form-check form-check-inline">
-                      <label>
-                          <input type="checkbox" [value]="lang.id" (change)="onCheckboxChange($event)" />
-                          {{lang.name}}
-                      </label>
-                  </div>
-                  <div *ngIf="submitted && f.languages.errors" class="text-danger"> Checkbox is required,select atleast one value.</div>
-              </div>
-          </div>
-          <div class="row form-group">
-              <div class="col-lg-4">Accept T & C </div>
-              <div class="col-lg-8">
-                  <input type="checkbox" formControlName="acceptTerms">
-                  <div *ngIf="submitted && f.acceptTerms.errors" class="text-danger">Accept Ts & Cs is required</div>
-              </div>
-          </div>
-      </div>
-      <div class="card-footer">
-          <button class="btn btn-info" style="width:100px;">Save</button>&nbsp;
-          <button (click)="resetForm(userForm)" class="btn btn-danger" style="width:100px;">Reset</button>
-      </div>
-  </form>
-  </div>
+    <div class="row">
+    <div class="col-lg-8">
+        <div class="card">
+            <div class="card-header">
+                User Information
+            </div>
+            <form [formGroup]="userForm" (ngSubmit)="onFormSubmit()">
+                <div class="card-body">
+                    <div class="row form-group">
+                        <div class="col-lg-4">Name</div>
+                        <div class="col-lg-8">
+                            <input type="text" formControlName="name" class="form-control">
+                            <div *ngIf="submitted && f.name.errors" class="text-danger">
+                                <div *ngIf="f.name.errors.required"> Name is required</div>
+                                <div *ngIf="f.name.errors.minlength">Name must be at least 6 characters
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <div class="col-lg-4">Email</div>
+                        <div class="col-lg-8">
+                            <input type="text" formControlName="email" class="form-control">
+                            <div *ngIf="submitted && f.email.errors" class="text-danger">
+                                <div *ngIf="f.email.errors.required">Email is required</div>
+                                <div *ngIf="f.email.errors.email">Email must be a valid email address</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <div class="col-lg-4">Mobile</div>
+                        <div class="col-lg-8">
+                            <input type="number" formControlName="mobile" class="form-control">
+                            <div *ngIf="submitted && f.mobile.errors" class="text-danger">
+                                <div *ngIf="f.mobile.errors.required">Mobile is required</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <div class="col-lg-4">State</div>
+                        <div class="col-lg-8">
+                            <select formControlName="state" (change)="onStateChange()" class="form-control">
+                                <option [ngValue]="null" F hidden>Choose your State</option>
+                                <option *ngFor="let state of states" [ngValue]="state.id">
+                                    {{ state.name }}
+                                </option>
+                            </select>
+                            <div *ngIf="submitted && f.state.errors" class="text-danger">
+                                <div *ngIf="f.state.errors.required">State is required</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <div class="col-lg-4">Gender</div>
+                        <div class="col-lg-8">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" value="male"  formControlName="gender">
+                                <label class="form-check-label">Male</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" value="female" formControlName="gender">
+                                <label class="form-check-label">Female</label>
+                            </div>
+                            <div *ngIf="submitted && f.gender.errors" class="text-danger">
+                                <div *ngIf="f.gender.errors.required">Gender is required</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <div class="col-lg-4">Languages </div>
+                        <div class="col-lg-8">
+                            <div *ngFor="let lang of languages; let i=index"
+                                class="form-check form-check-inline">
+                                <label>
+                                    <input type="checkbox" [value]="lang.id" (change)="onCheckboxChange($event)" />{{lang.name}}
+                                </label>
+                            </div>
+                            <div *ngIf="submitted && f.languages.errors" class="text-danger"> Checkbox is required, select atleast one value.</div>
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <div class="col-lg-4">Accept T & C </div>
+                        <div class="col-lg-8">
+                            <input type="checkbox" formControlName="acceptTerms">
+                            <div *ngIf="submitted && f.acceptTerms.errors" class="text-danger">Accept Ts &Cs is required</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <button class="btn btn-info" style="width:100px;">Save</button>&nbsp;
+                    <button (click)="resetForm(userForm)" class="btn btn-danger" style="width:100px;">Reset</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="col-lg-4">
+        <div class="card">
+            <div class="card-header">
+                All Users
+            </div>
+            <div class="card-body">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th width="100px">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let user of users">
+                            <td>{{user.name}}</td>
+                            <td>
+                                <button class="btn btn-info btn-sm" (click)="getUserDetails(user.id)"><i class="fa fa-edit"></i></button>&nbsp;
+                                <button class="btn btn-danger btn-sm" (click)="deleteUser(user.id)"><i class="fa fa-trash"></i></button>
+                           </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
 </div>
 `;
-this.codes.reactiveform_demo_ts = `
+    this.codes.reactiveform_demo_ts = `
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, FormControl, FormArray, Validators } from '@angular/forms';
 import { UserService } from '../../service/user.service';
-import { User } from '../../domain/user';
+import { User, State, Language } from '../../domain/user';
 
 @Component({
   selector: 'app-reactive-form-tutorial',
@@ -294,15 +364,17 @@ export class ReactiveFormTutorialComponent implements OnInit {
 
   states: any;
   languages: any;
-
+  users: any;
+  userId: number = 0;
+  userdetails: any;
   userForm: FormGroup;
-  submitted = false;
+  submitted: boolean = false;
 
   constructor(
     private formBuilder: FormBuilder,
     private userService: UserService,
-
   ) { }
+
   ngOnInit(): void {
     this.userForm = this.formBuilder.group({
       name: ['', [Validators.required, Validators.minLength(6)]],
@@ -316,6 +388,7 @@ export class ReactiveFormTutorialComponent implements OnInit {
 
     this.getAllStates();
     this.getAllLanguages();
+    this.getAllUsers();
   }
   getAllStates() {
     this.userService.getAllStateList().subscribe(response => {
@@ -327,15 +400,18 @@ export class ReactiveFormTutorialComponent implements OnInit {
       this.languages = response;
     })
   }
+  getAllUsers() {
+    this.userService.getAllUserList().subscribe(response => {
+      this.users = response;
+    })
+  }
   get f() { return this.userForm.controls; }
 
   resetForm(form: FormGroup) {
     form.reset();
   }
-
   onCheckboxChange(e) {
     const languages: FormArray = this.userForm.get('languages') as FormArray;
-
     if (e.target.checked) {
       languages.push(new FormControl(e.target.value));
     } else {
@@ -354,15 +430,49 @@ export class ReactiveFormTutorialComponent implements OnInit {
     if (this.userForm.invalid) {
       return;
     }
+
     const user: User = this.userForm.value;
-    this.userService.createUser(user).subscribe(
-      () => {
+    if (this.userId == 0) {
+      this.userService.createUser(user).subscribe(response => {
+        this.getAllUsers();
+        this.userId = 0;
         this.userForm.reset();
-      }
-    );
-  }
-`;
+        this.submitted = false;
+      });
+    } else {
+      user.id = this.userId;
+      this.userService.updateUser(this.userId,user).subscribe(() => {
+        this.getAllUsers();
+        this.userId = 0;
+        this.userForm.reset();
+        this.submitted = false;
+      });
+    }
   }
   
+  getUserDetails(id: number) {
+    this.userService.getUserDetails(id).subscribe(response => {
+      this.userdetails = response;
+      this.userId = this.userdetails.id
+      this.userForm.patchValue({
+        name: this.userdetails.name,
+        email: this.userdetails.email,
+        mobile: this.userdetails.mobile,
+        state: this.userdetails.state,
+        gender: this.userdetails.gender,
+        acceptTerms: this.userdetails.acceptTerms,
+      });
+    })
+  }
+  deleteUser(id: number) {
+    this.userService.deleteUser(id).subscribe(response => {
+      this.getAllUsers();
+    })
+  }
+
+}
+`;
+  }
+
 
 }
