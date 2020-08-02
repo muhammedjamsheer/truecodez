@@ -1,0 +1,161 @@
+<div class="pagelayout">
+    <div class="row">
+        <div class="col-12">
+            <div class="card mt-3 tab-card">
+
+                <div class="card-header tab-card-header">
+                    <ul class="nav nav-tabs card-header-tabs" id="myTab" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link" id="one-tab" data-toggle="tab" href="#one" role="tab"
+                                aria-controls="One" aria-selected="true">PDF Export - jspdf</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" id="two-tab" data-toggle="tab" href="#two" role="tab"
+                                aria-controls="Two" aria-selected="false">PDF Export - pdfmake</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="three-tab" data-toggle="tab" href="#three" role="tab"
+                                aria-controls="Three" aria-selected="false">Excel Export</a>
+                        </li>
+  
+
+                    </ul>
+                </div>
+
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active p-3" id="one" role="tabpanel" aria-labelledby="one-tab">
+
+                        <div class="card">
+                            <div class="card-header">
+                                Export PDF in Angular with JSPDF
+                            </div>
+                            <div class="card-body">
+                                <div class=" text-right">
+                                    <button class="btn btn-success btn-sm m-2" (click)="exportPdf('open')">Open
+                                        PDF</button>
+                                    <button class="btn btn-danger btn-sm m-2" (click)="exportPdf('download')">Download
+                                        PDF</button>
+                                </div>
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th>Sl No.</th>
+                                            <th>Name</th>
+                                            <th>Email</th>
+                                            <th>Mobile</th>
+                                            <th>Date of Birth</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr *ngFor="let std of studentsList;let i = index;">
+                                            <td>{{i+1}}</td>
+                                            <td>{{std.name}}</td>
+                                            <td>{{std.email}}</td>
+                                            <td>{{std.mobile}}</td>
+                                            <td>{{std.dob}}</td>
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <h6 class="header">Install jsPDF Package</h6>
+                                <p>Next, install the jsPDF package in your angular application using the below command.
+                                </p>
+                                <ngx-prism language="html">
+                                    {{codes.install_jspdf}}
+                                </ngx-prism>
+                                <strong>app.component.html</strong>
+                                <ngx-prism language="html">
+                                    {{codes.jspdf_component_html}}
+                                </ngx-prism>
+                                <strong>app.component.ts</strong>
+                                <ngx-prism language="javascript">
+                                    {{codes.jspdf_component_ts}}
+                                </ngx-prism>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="tab-pane fade show active p-3" id="two" role="tabpanel" aria-labelledby="two-tab">
+
+                        <div class="card">
+                            <div class="card-header">
+                                Export PDF in Angular with PDFMake
+                            </div>
+                            <div class="card-body">
+                   
+
+                                <h6 class="header">Install PDFMake Package</h6>
+                                <p>First, we need to install the PDFMake library which is an open-source JavaScript library for client-side PDF generation. Simply run the following command.
+                                </p>
+                                <p>Next, we need to import 2 files — <strong>pdfmake.js</strong> and <strong>vfs_fonts.js</strong> . Insert the code below at the top of your component or service.</p>
+                                <ngx-prism language="html">
+                                    {{codes.install_pdfmake}}
+                                </ngx-prism>
+                                <h6 class="header">Example-1 : Generate Single Line Text in PDF</h6>
+
+                                <div class=" text-right">
+                                    <button class="btn btn-success btn-sm m-2" (click)="generatePdfMakeExample1('open')">Open
+                                        PDF</button>
+                                    <button class="btn btn-danger btn-sm m-2" (click)="generatePdfMakeExample1('download')">Download
+                                        PDF</button>
+                                </div>
+
+                                <p><strong>angular-export.component.html</strong></p>
+                                <ngx-prism language="html">
+                                    {{codes.pdfmake_singleline_html}}
+                                </ngx-prism>
+                                <p><strong>angular-export.component.ts</strong></p>
+                                <ngx-prism language="javascript">
+                                    {{codes.pdfmake_singleline_ts}}
+                                </ngx-prism>
+
+
+                                <h6 class="header">Example-2 : Generate Dynamic Text in PDF</h6>
+
+                                <div class=" text-right">
+                                    <button class="btn btn-success btn-sm m-2" (click)="generatePdfMakeExample2(action='open')">Open
+                                        PDF</button>
+                                    <button class="btn btn-danger btn-sm m-2" (click)="generatePdfMakeExample2(action='download')">Download
+                                        PDF</button>
+                                </div>
+
+                                <p><strong>angular-export.component.html</strong></p>
+                                <ngx-prism language="html">
+                                    {{codes.pdfmake_dynamic_html}}
+                                </ngx-prism>
+                                <p><strong>angular-export.component.ts</strong></p>
+                                <ngx-prism language="javascript">
+                                    {{codes.pdfmake_dynamic_ts}}
+                                </ngx-prism>
+
+
+
+                   
+
+                        
+                            </div>
+                        </div>
+                        <br>
+
+                    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

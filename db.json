@@ -49,6 +49,28 @@
       "name": "Maharashtra"
     }
   ],
+  "districts": [
+    {
+      "id": 1,
+      "name": "Trivandrum"
+    },
+    {
+      "id": 2,
+      "name": "Kollam"
+    },
+    {
+      "id": 3,
+      "name": "Ernamkulam"
+    },
+    {
+      "id": 4,
+      "name": "Palakkad"
+    },
+    {
+      "id": 4,
+      "name": "Malappuram"
+    }
+  ],
   "Languages": [
     {
       "id": 1,
@@ -91,6 +113,77 @@
       ],
       "acceptTerms": true,
       "id": 2
+    }
+  ],
+  "employees": [
+    {
+      "name": "jamsheer",
+      "district": 4,
+      "employees": [
+        {
+          "empName": "basheer",
+          "age": 58,
+          "district": 1
+        },
+        {
+          "empName": "thafseer",
+          "age": 29,
+          "district": 3
+        },
+        {
+          "empName": "haniya",
+          "age": 42,
+          "district": 1
+        }
+      ],
+      "id": 1
+    },
+    {
+      "name": "nasikpp",
+      "district": 2,
+      "employees": [
+        {
+          "empName": "najirpp",
+          "age": 33,
+          "district": 1
+        },
+        {
+          "empName": "ansilpp",
+          "age": 30,
+          "district": 4
+        }
+      ],
+      "id": 2
+    }
+  ],
+  "students": [
+    {
+      "id": 1,
+      "name": "Jamsheer",
+      "email": "jamsheer@mail.com",
+      "mobile": 8592947647,
+      "dob": "29/06/12"
+    },
+    {
+      "id": 1,
+      "name": "Jamsheer",
+      "email": "jamsheer@mail.com",
+      "mobile": 8592947647,
+      "dob": "29/06/12"
+    },
+    {
+      "id": 1,
+      "name": "Nithin",
+      "email": "nithin@mail.com",
+      "mobile": 9048188905,
+      "dob": "06/06/12"
+    },
+    {
+      "id": 1,
+      "name": "Pranav",
+      "email": "pranav@mail.com",
+      "mobile": 7736400352,
+      "dob": "29/06/12"
     }
   ]
 }

@@ -18,9 +18,10 @@ import { EmployeeRequestComponent } from './reactive-form/view/employee-crud/emp
 import { ReactiveFormTutorialComponent } from './reactive-form/view/reactive-form-tutorial/reactive-form-tutorial.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { JsonserverSaveDataComponent } from './jsonserver-save-data/jsonserver-save-data.component';
+import { AngularExportComponent } from './angular-export/angular-export.component';
 
 @NgModule({
-  declarations: [HomeComponent, BasicsComponent, ChildComponent, ParentComponent, ParenttochildComponent, ChildtoparentComponent, InterviewQuestionsComponent, SharingdataservicesComponent, ToasterNotificationsComponent, EmployeeListComponent, EmployeeRequestComponent, ReactiveFormTutorialComponent, JsonserverSaveDataComponent,],
+  declarations: [HomeComponent, BasicsComponent, ChildComponent, ParentComponent, ParenttochildComponent, ChildtoparentComponent, InterviewQuestionsComponent, SharingdataservicesComponent, ToasterNotificationsComponent, EmployeeListComponent, EmployeeRequestComponent, ReactiveFormTutorialComponent, JsonserverSaveDataComponent, AngularExportComponent,],
   imports: [
     CommonModule,
     AngularRoutingModule,

@@ -154,7 +154,7 @@
                                     <div class="col-lg-4">State</div>
                                     <div class="col-lg-8">
                                         <select formControlName="state" (change)="onStateChange()" class="form-control">
-                                            <option [ngValue]="null" F hidden>Choose your State</option>
+                                            <option [ngValue]="null"  hidden>Choose your State</option>
                                             <option *ngFor="let state of states" [ngValue]="state.id">
                                                 {{ state.name }}
                                             </option>

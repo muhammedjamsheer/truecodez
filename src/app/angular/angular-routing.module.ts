@@ -10,8 +10,10 @@ import { InterviewQuestionsComponent } from './interview-questions/interview-que
 import { SharingdataservicesComponent } from './sharingdataservices/sharingdataservices.component';
 import { ToasterNotificationsComponent } from './toaster-notifications/toaster-notifications.component';
 import { EmployeeListComponent } from './reactive-form/view/employee-crud/employee-list/employee-list.component';
+import { EmployeeRequestComponent } from './reactive-form/view/employee-crud/employee-request/employee-request.component';
 import { ReactiveFormTutorialComponent } from './reactive-form/view/reactive-form-tutorial/reactive-form-tutorial.component';
 import { JsonserverSaveDataComponent } from './jsonserver-save-data/jsonserver-save-data.component';
+import { AngularExportComponent } from './angular-export/angular-export.component';
 const routes: Routes = [
   {
     path: '',
@@ -54,12 +56,20 @@ const routes: Routes = [
     component: EmployeeListComponent
   },
   {
+    path: 'employee-request',
+    component: EmployeeRequestComponent
+  },
+  {
     path: 'reactive-form',
     component: ReactiveFormTutorialComponent
   },
   {
     path: 'json-server',
     component: JsonserverSaveDataComponent
+  },
+  {
+    path: 'export',
+    component: AngularExportComponent
   }
 ];
 
