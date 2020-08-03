@@ -1,58 +1,59 @@
-/***
-Bootstrap4 Card with Tabs by @mdeuerlein
-***/
-
-body {
-    background-color: #f7f8f9;
+.nav-pills-custom .nav-link {
+  color: #aaa;
+  background: #fff;
+  position: relative;
 }
 
-.card {
-    background-color: #ffffff;
-    border: 1px solid rgba(0, 34, 51, 0.1);
-    box-shadow: 2px 4px 10px 0 rgba(0, 34, 51, 0.05), 2px 4px 10px 0 rgba(0, 34, 51, 0.05);
-    border-radius: 0.15rem;
+.nav-pills-custom .nav-link.active {
+  color: #45b649;
+  background: #fff;
 }
 
-/* Tabs Card */
-
-.tab-card {
-  border:1px solid #eee;
+.tab-content > .active {
+  display: block;
+  min-height: 640px;
+}
+/* Add indicator arrow for the active tab */
+@media (min-width: 992px) {
+  .nav-pills-custom .nav-link::before {
+      content: '';
+      display: block;
+      border-top: 8px solid transparent;
+      border-left: 10px solid #fff;
+      border-bottom: 8px solid transparent;
+      position: absolute;
+      top: 50%;
+      right: -10px;
+      transform: translateY(-50%);
+      opacity: 0;
+  }
 }
 
-.tab-card-header {
-  background:none;
-}
-/* Default mode */
-.tab-card-header > .nav-tabs {
-  border: none;
-  margin: 0px;
-}
-.tab-card-header > .nav-tabs > li {
-  margin-right: 2px;
-}
-.tab-card-header > .nav-tabs > li > a {
-  border: 0;
-  border-bottom:2px solid transparent;
-  margin-right: 0;
-  color: #737373;
-  padding: 2px 15px;
+.nav-pills-custom .nav-link.active::before {
+  opacity: 1;
 }
 
-.tab-card-header > .nav-tabs > li > a.show {
-    border-bottom:2px solid #007bff;
-    color: #007bff;
+
+.highlight{
+  color: crimson;
+  background-color: #f1f1f1;
+  padding:  0px 4px 4px;
+
 }
-.tab-card-header > .nav-tabs > li > a:hover {
-    color: #007bff;
+.highlight-text{
+  background: #eef8b8;
+  padding: 14px;
+  margin-bottom:10px;
+}
+h6{
+  font-size: 20px;
+  color:#991515;
 }
 
-.tab-card-header > .tab-content {
-  padding-bottom: 0;
-}
-.strong{
-  font-weight: bold;
-}
-
-ul li{
-  line-height: 2;
+.sidebarnav {
+  width: 237px;
+  height: 700px;
+  overflow: auto;
+  position: fixed;
+  padding-right: 21px;
 }
