@@ -10,6 +10,10 @@ const routes: Routes = [
   {
     path: 'javascript',
     loadChildren: () => import('./javascript/javascript.module').then(m => m.JavascriptModule)
+  },
+  {
+    path: 'workspace',
+    loadChildren: () => import('./workspace/workspace.module').then(m => m.WorkspaceModule)
   }
 ];
 

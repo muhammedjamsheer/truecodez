@@ -1,0 +1,42 @@
+<div class="container">
+    <div class="card">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Sl No.</th>
+                    <th>Gender</th>
+                    <th>Name</th>
+                    <th>Action</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let emp of items;let i=index;">
+                    <td>{{i+1}} </td>
+                    <td> 
+                        <select  [(ngModel)]="emp.gender"  class="form-control" (change)="getStudent(emp.gender)">
+                            <option [ngValue]="null"  hidden>Choose</option>
+                            <option *ngFor="let gen of gender" [ngValue]="gen.id">
+                                {{gen.gender}}
+                            </option>
+                        </select>
+                    </td>
+                    <td> 
+                        <select  [(ngModel)]="emp.student"  class="form-control"  (change)="getCast(emp.student,i)">
+                          
+                            <option *ngFor="let student of selectedStudents" [ngValue]="student.id">
+                                {{student.name}}
+                            </option>
+                        </select>
+                    </td>
+                    <td><button (click)="addRow(i);" class="btn btn-info">Add</button>&nbsp;
+                        <button (click)="deleteRow(i,emp);" class="btn btn-danger">Del</button>&nbsp;
+                        <button *ngIf="emp.button==true" class="btn btn-success" id="btSubmit" >Muslim</button>
+                    </td>
+                </tr>
+           
+            </tbody>  
+        </table>
+    </div> 
+</div>
+https://stackblitz.com/edit/angular-form-array-example-5buwyr?file=src%2Fapp%2Fapp.component.html

@@ -4,15 +4,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { BasicsComponent } from './basics/basics.component';
 const routes: Routes = [
-  {
-    path: '',
-    component: HomeComponent
-  },
-  {
-    path: 'basics',
-    component: BasicsComponent
-  },
-
+  { path: '', component: HomeComponent },
+  { path: 'basics', component: BasicsComponent },
 ];
 
 @NgModule({

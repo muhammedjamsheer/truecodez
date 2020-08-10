@@ -1,0 +1,99 @@
+<!-- Demo header-->
+<section>
+    <div class="row">
+        <div class="col-md-2">
+            <div class="sidebarnav">
+                <!-- Tabs nav -->
+                <div class="nav flex-column nav-pills nav-pills-custom" id="v-pills-tab" role="tablist"
+                    aria-orientation="vertical">
+
+                    <a class="nav-link mb-3 p-3 shadow active" id="parent-child-tab" data-toggle="pill"
+                        href="#parent-child" role="tab" aria-controls="parent-child" aria-selected="true">
+                        <i class="fa fa-user-circle-o mr-2"></i>
+                        <span class="font-weight-bold small text-uppercase">Parent -> Child</span></a>
+
+                    <a class="nav-link mb-3 p-3 shadow" id="child-parent-tab" data-toggle="pill"
+                        href="#child-parent" role="tab" aria-controls="child-parent" aria-selected="false">
+                        <i class="fa fa-star mr-2"></i>
+                        <span class="font-weight-bold small text-uppercase">Child -> Parent</span></a>
+
+                        <a class="nav-link mb-3 p-3 shadow" id="service-tab" data-toggle="pill"
+                        href="#service" role="tab" aria-controls="service" aria-selected="false">
+                        <i class="fa fa-star mr-2"></i>
+                        <span class="font-weight-bold small text-uppercase">Service Method</span></a>
+
+                   
+
+
+
+                </div>
+            </div>
+        </div>
+        <div class="col-md-10">
+            <!-- Tabs content -->
+            <div class="tab-content" id="v-pills-tabContent">
+                <div class="tab-pane fade shadow rounded bg-white show active p-5" id="parent-child" role="tabpanel"
+                    aria-labelledby="parent-child-tab">
+                    <h4 class="font-italic mb-4"> Pass data from parent to child component</h4>
+                    <p>The <strong>@Input()</strong> decorator allows Angular to share data from Parent to child</p>
+                   
+                    <strong>parent.component.html</strong>
+                    <ngx-prism language="html">
+                        {{codes.parent_html_content1}}
+                    </ngx-prism>
+                    <strong>parent.component.ts</strong>
+                    <ngx-prism language="javascript">
+                        {{codes.parent_ts_content1}}
+                    </ngx-prism>
+
+                    <strong>child.component.html</strong>
+                    <ngx-prism language="html">
+                        {{codes.child_html_content1}}
+                    </ngx-prism>
+
+                    <strong>child.component.ts</strong>
+                    <ngx-prism language="javascript">
+                        {{codes.child_ts_content1}}
+                    </ngx-prism>
+    
+
+                </div>
+                <!--  Pass data from child to parent component -->
+                <div class="tab-pane fade shadow rounded bg-white p-5" id="child-parent" role="tabpanel"
+                    aria-labelledby="child-parent-tab">
+                    <h4 class="font-italic mb-4"> Pass data from child to parent component</h4>
+                </div>
+
+                <div class="tab-pane fade shadow rounded bg-white p-5" id="service" role="tabpanel"
+                aria-labelledby="service-tab">
+                <h4 class="font-italic mb-4"> Pass data from component to another component using service method</h4>
+
+                <p>First we create a service file ,first-component , second-component. Here we are sharing data fron
+                    first-component
+                    to second-component</p>
+                <p><strong>data.service.ts</strong></p>
+                <ngx-prism language="javascript">
+                    {{codes.sharingData}}
+                </ngx-prism>
+
+                <p><strong>data.service.ts</strong></p>
+                <ngx-prism language="javascript">
+                    {{codes.sharingData}}
+                </ngx-prism>
+                <p><strong>first-component.ts</strong></p>
+                <ngx-prism language="javascript">
+                    {{codes.firstcomponentts}}
+                </ngx-prism>
+                <p><strong>second-component.ts</strong></p>
+                <ngx-prism language="javascript">
+                    {{codes.secondcomponentts}}
+                </ngx-prism>
+                <p><strong>second-component.html</strong></p>
+                <ngx-prism language="javascript">
+                    {{codes.secondcomponenthtml}}
+                </ngx-prism>
+            </div>
+            </div>
+        </div>
+    </div>
+</section>

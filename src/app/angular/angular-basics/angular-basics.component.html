@@ -1,0 +1,82 @@
+<!-- Demo header-->
+<section>
+    <div class="row">
+        <div class="col-md-2">
+            <div class="sidebarnav">
+                <!-- Tabs nav -->
+                <div class="nav flex-column nav-pills nav-pills-custom" id="v-pills-tab" role="tablist"
+                    aria-orientation="vertical">
+
+                    <a class="nav-link mb-3 p-3 shadow active" id="introduction-tab" data-toggle="pill"
+                        href="#introduction" role="tab" aria-controls="introduction" aria-selected="true">
+                        <i class="fa fa-user-circle-o mr-2"></i>
+                        <span class="font-weight-bold small text-uppercase">Introducrion</span></a>
+
+                    <a class="nav-link mb-3 p-3 shadow" id="lifecyclehooks-tab" data-toggle="pill"
+                        href="#lifecyclehooks" role="tab" aria-controls="lifecyclehooks" aria-selected="false">
+                        <i class="fa fa-star mr-2"></i>
+                        <span class="font-weight-bold small text-uppercase">Life Cycle Hooks</span></a>
+
+                </div>
+            </div>
+        </div>
+        <div class="col-md-10">
+            <!-- Tabs content -->
+            <div class="tab-content" id="v-pills-tabContent">
+                <div class="tab-pane fade shadow rounded bg-white show active p-5" id="introduction" role="tabpanel"
+                    aria-labelledby="introduction-tab">
+                    <h4 class="font-italic mb-4"> Introduction</h4>
+
+
+                    <ngx-prism language="html">
+                        {{codes.parent_html_content1}}
+                    </ngx-prism>
+
+
+
+                </div>
+                <!-- angular component -->
+                <div class="tab-pane fade shadow rounded bg-white p-5" id="lifecyclehooks" role="tabpanel"
+                    aria-labelledby="lifecyclehooks-tab">
+                    <h4 class="font-italic mb-4"> Life Cycle Hooks in Angular</h4>
+                    <p>The hooks are executed in this order</p>
+                    <img style="height:300px;" src="../../../assets/images/lifecyclehook.jpg">
+
+                    <h6>constructor</h6>
+                    <p>It is invoked when Angular creates a component or directive by calling new on the class.</p>
+                    <h6>ngOnChanges</h6>
+                    <p>It is Invoked every time when there is a change in the input properties of the component.</p>
+                    <div class="card">
+                        <div class="card-header">
+                            <h6>ngOnChanges Example</h6>
+                        </div>
+                        <div class="card-body">
+                            <p>ngOnChanges() will fire before ngOnInit() and every time parent Detais updated from its parent component.</p>
+                            <p>The hook receives a SimpleChanges object that contains the previous and current values for the data-bound inputs properties. </p>
+                            <h6>parent.component.html</h6>
+                            <ngx-prism language="html">
+                                {{codes.ngonchages_parent_html}}
+                            </ngx-prism>
+                            <h6>parent.component.ts</h6>
+                            <ngx-prism language="javascript">
+                                {{codes.ngonchages_parent_ts}}
+                            </ngx-prism>
+                            <h6>child.component.html</h6>
+                            <ngx-prism language="html">
+                                {{codes.ngonchages_child_html}}
+                            </ngx-prism>
+                            <h6>child.component.ts</h6>
+                            <ngx-prism language="javascript">
+                                {{codes.ngonchages_child_ts}}
+                            </ngx-prism>
+        
+
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</section>

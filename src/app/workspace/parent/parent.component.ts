@@ -6,12 +6,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./parent.component.scss']
 })
 export class ParentComponent implements OnInit {
-  dataFromChild:string
-  constructor() { }
+  data = 0
+  arbitraryData: string = 'initial';
+  constructor() { 
+    setTimeout(() => {
+      this.arbitraryData = 'final';
+    }, 5000);
+  }
+  
+  
 
   ngOnInit() {
   }
-  receiveData($event){
-    this.dataFromChild = $event;
+
+  changeFromParent(){
+    this.data +=1;
   }
 }

@@ -5,8 +5,6 @@ import { AngularRoutingModule } from './angular-routing.module';
 import { HomeComponent } from './home/home.component';
 import { PrismModule } from '@ngx-prism/core';
 import { BasicsComponent } from './basics/basics.component';
-import { ChildComponent } from './child/child.component';
-import { ParentComponent } from './parent/parent.component';
 import { ParenttochildComponent } from './parenttochild/parenttochild.component';
 import { ChildtoparentComponent } from './childtoparent/childtoparent.component';
 import { FormsModule } from '@angular/forms';
@@ -19,9 +17,11 @@ import { ReactiveFormTutorialComponent } from './reactive-form/view/reactive-for
 import { ReactiveFormsModule } from '@angular/forms';
 import { JsonserverSaveDataComponent } from './jsonserver-save-data/jsonserver-save-data.component';
 import { AngularExportComponent } from './angular-export/angular-export.component';
+import { DataSharingComponent } from './data-sharing/data-sharing.component';
+import { AngularBasicsComponent } from './angular-basics/angular-basics.component';
 
 @NgModule({
-  declarations: [HomeComponent, BasicsComponent, ChildComponent, ParentComponent, ParenttochildComponent, ChildtoparentComponent, InterviewQuestionsComponent, SharingdataservicesComponent, ToasterNotificationsComponent, EmployeeListComponent, EmployeeRequestComponent, ReactiveFormTutorialComponent, JsonserverSaveDataComponent, AngularExportComponent,],
+  declarations: [HomeComponent, BasicsComponent, ParenttochildComponent, ChildtoparentComponent, InterviewQuestionsComponent, SharingdataservicesComponent, ToasterNotificationsComponent, EmployeeListComponent, EmployeeRequestComponent, ReactiveFormTutorialComponent, JsonserverSaveDataComponent, AngularExportComponent, DataSharingComponent, AngularBasicsComponent,],
   imports: [
     CommonModule,
     AngularRoutingModule,

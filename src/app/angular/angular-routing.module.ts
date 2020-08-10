@@ -2,8 +2,6 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { BasicsComponent } from './basics/basics.component';
-import { ChildComponent } from './child/child.component';
-import { ParentComponent } from './parent/parent.component';
 import { ParenttochildComponent } from './parenttochild/parenttochild.component';
 import { ChildtoparentComponent } from './childtoparent/childtoparent.component';
 import { InterviewQuestionsComponent } from './interview-questions/interview-questions.component';
@@ -14,6 +12,8 @@ import { EmployeeRequestComponent } from './reactive-form/view/employee-crud/emp
 import { ReactiveFormTutorialComponent } from './reactive-form/view/reactive-form-tutorial/reactive-form-tutorial.component';
 import { JsonserverSaveDataComponent } from './jsonserver-save-data/jsonserver-save-data.component';
 import { AngularExportComponent } from './angular-export/angular-export.component';
+import { DataSharingComponent } from './data-sharing/data-sharing.component';
+import { AngularBasicsComponent } from './angular-basics/angular-basics.component';
 const routes: Routes = [
   {
     path: '',
@@ -21,15 +21,7 @@ const routes: Routes = [
   },
   {
     path: 'basics',
-    component: BasicsComponent
-  },
-  {
-    path: 'child',
-    component: ChildComponent
-  },
-  {
-    path: 'parent',
-    component: ParentComponent
+    component: AngularBasicsComponent
   },
   {
     path: 'parent-to-child',
@@ -70,6 +62,10 @@ const routes: Routes = [
   {
     path: 'export',
     component: AngularExportComponent
+  },
+  {
+    path: 'data-sharing',
+    component: DataSharingComponent
   }
 ];
 
