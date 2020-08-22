@@ -17,7 +17,7 @@ export class UserService {
       'Content-Type': 'application/json'
     })
   }
-
+  
   getAllStateList() {
     return this.http.get(this.url + '/states');
   }
