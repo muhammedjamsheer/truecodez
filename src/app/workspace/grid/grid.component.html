@@ -23,7 +23,7 @@
                     </td>
                     <td> 
                         <select  [(ngModel)]="emp.student"  class="form-control"  (change)="getCast(emp.student,i)">
-                          
+                            <option value="" [disabled]="true">Select quantity</option>
                             <option *ngFor="let student of selectedStudents" [ngValue]="student.id">
                                 {{student.name}}
                             </option>

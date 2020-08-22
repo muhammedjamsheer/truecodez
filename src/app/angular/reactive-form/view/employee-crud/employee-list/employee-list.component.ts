@@ -63,13 +63,20 @@ export class EmployeeListComponent implements OnInit {
     this.codes.createproject1 = `ng new EmployeeApp`;
     this.codes.createproject2 = `cd EmployeeApp`;
     this.codes.createproject3 = `ng s --open --poll 2000 --port 4200`;
-    this.codes.bootsrap1 = `npm install bootstrap`;
+    this.codes.bootsrap1 = `npm install --save bootstrap
+npm install --save jquery
+`;
     this.codes.bootsrap2 = `npm i @fortawesome/fontawesome-free`;
     this.codes.bootsrap3 =
-      `"styles": [
-    "node_modules/bootstrap/dist/css/bootstrap.min.css",
-    "src/styles.css",
-    "node_modules/@fortawesome/fontawesome-free/css/all.css"
+`
+"styles": [
+  "./node_modules/bootstrap/dist/css/bootstrap.css",
+  "src/styles.scss",
+  "node_modules/@fortawesome/fontawesome-free/css/all.css"
+],
+"scripts": [
+  "./node_modules/jquery/dist/jquery.js",
+  "./node_modules/bootstrap/dist/js/bootstrap.js"
 ]`;
 
 
