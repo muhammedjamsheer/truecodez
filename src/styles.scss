@@ -26,4 +26,25 @@ body{
     .routerLink:hover{
         cursor: pointer;
     }
+    h6{
+        margin-top:12px;
+    }
+}
+.card {
+    .card-header h6{
+        font-size: 1.5rem;
+        color: #b00d0d;
+    }
+    .sub_heading{
+        margin: 20px 0px;
+        background-color: #c6d79d;
+        padding: 12px;
+        color: #070707;
+    }
+
+}
+
+.active{
+    background-color: #bcd3b5;
+    color:black !important;
 }
