@@ -1,0 +1,75 @@
+<div class="container" style="margin-top: 25px;">
+
+    <h5>ViewChild and ViewChildren </h5>
+    <p>The @ViewChild and @ViewChildren decorators used to access and manipulate DOM elements, directives and
+        components.</p>
+    <p>We can use ViewChild to query one element from the DOM and ViewChildren for multiple elements as a QueryList of
+        items.</p>
+    <h2></h2>
+
+    <p class="subheader"> Syntax </p>
+    <!-- <p>ViewChild(selector: string | Function | Type<any>, opts: { read?: any; static: boolean; }): any </p>
+    <p> @ViewChild(HelloComponent, {static: false}) hello: HelloComponent;</p> -->
+    <P>To Query a DOM element(s), we must supply the query selector, which can be a string or a type as the first
+        argument to the ViewChild or ViewChildren</P>
+    <p>The argument static determines whether the query is performed, before or after the change detection.</p>
+    <p>
+
+        static option is set to true when you want to access the ViewChild in ngOnInit.
+        static option : false can only be accessed in ngAfterViewInit.or when the child is rendered dynamically . For
+        Example inside a ngIf or ngSwitch etc.
+    </p>
+
+    <p>The read option allows us to query a different token rather than the default and is useful when the element is
+        associated with multiple types.</p>
+    <h6></h6>
+    <p class="subheader"> ViewChild Examples </p>
+
+
+    <div class="card-body">
+        <h6>1 .Injecting Component </h6>
+
+        <p><b>ChildComponent.ts</b></p>
+        <ngx-prism language="javascript">
+            {{Component_child_ts}}
+        </ngx-prism>
+
+        <p><b>ParentComponent.html</b></p>
+        <ngx-prism language="html">
+            {{Component_parent_html}}
+        </ngx-prism>
+
+        <p><b>ParentComponent.ts</b></p>
+        <ngx-prism language="javascript">
+            {{Component_parent_ts}}
+        </ngx-prism>
+    </div>
+
+    <div class="card-body">
+        <h6>2 .Using Template Reference Variable </h6>
+
+        <ngx-prism language="html">
+            {{TemplateReference1}}
+        </ngx-prism>
+
+        <ngx-prism language="javascript">
+            {{TemplateReference2}}
+        </ngx-prism>
+    </div>
+
+    <div class="card-body">
+        <h6>3 .Injecting HTML Element Using ElementRef </h6>
+        <p>The Viewchild can also be used to query HTML elements.</p>
+        <p>ViewChild returns a ElementRef, which is nothing but a wrapper around the native HTML element.</p>
+
+        <ngx-prism language="html">
+            {{ElementRef1}}
+        </ngx-prism>
+
+        <ngx-prism language="javascript">
+            {{ElementRef2}}
+        </ngx-prism>
+    </div>
+
+
+</div>

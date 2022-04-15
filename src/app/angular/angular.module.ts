@@ -1,33 +1,26 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
+import { PrismModule } from '@ngx-prism/core';
 import { AngularRoutingModule } from './angular-routing.module';
 import { HomeComponent } from './home/home.component';
-import { PrismModule } from '@ngx-prism/core';
-import { BasicsComponent } from './basics/basics.component';
-import { ParenttochildComponent } from './parenttochild/parenttochild.component';
-import { ChildtoparentComponent } from './childtoparent/childtoparent.component';
-import { FormsModule } from '@angular/forms';
-import { InterviewQuestionsComponent } from './interview-questions/interview-questions.component';
-import { SharingdataservicesComponent } from './sharingdataservices/sharingdataservices.component';
-import { ToasterNotificationsComponent } from './toaster-notifications/toaster-notifications.component';
-import { EmployeeListComponent } from './reactive-form/view/employee-crud/employee-list/employee-list.component';
-import { EmployeeRequestComponent } from './reactive-form/view/employee-crud/employee-request/employee-request.component';
-import { ReactiveFormTutorialComponent } from './reactive-form/view/reactive-form-tutorial/reactive-form-tutorial.component';
-import { ReactiveFormsModule } from '@angular/forms';
-import { JsonserverSaveDataComponent } from './jsonserver-save-data/jsonserver-save-data.component';
-import { AngularExportComponent } from './angular-export/angular-export.component';
-import { DataSharingComponent } from './data-sharing/data-sharing.component';
-import { AngularBasicsComponent } from './angular-basics/angular-basics.component';
+import { LifecyclehooksComponent } from './lifecyclehooks/lifecyclehooks.component';
+import { ViewchildComponent } from './viewchild/viewchild.component';
+import { ContentprojectionComponent } from './contentprojection/contentprojection.component';
+import { HostbindingComponent } from './hostbinding/hostbinding.component';
+import { NgcontainerComponent } from './ngcontainer/ngcontainer.component';
+import { RoutingComponent } from './routing/routing.component';
+import { EmployeelistComponent } from './employees/employeelist/employeelist.component';
+import { EmployeecreateComponent } from './employees/employeecreate/employeecreate.component';
+import { EmployeeviewComponent } from './employees/employeeview/employeeview.component';
+import { ReactiveformComponent } from './reactiveform/reactiveform.component';
+
 
 @NgModule({
-  declarations: [HomeComponent, BasicsComponent, ParenttochildComponent, ChildtoparentComponent, InterviewQuestionsComponent, SharingdataservicesComponent, ToasterNotificationsComponent, EmployeeListComponent, EmployeeRequestComponent, ReactiveFormTutorialComponent, JsonserverSaveDataComponent, AngularExportComponent, DataSharingComponent, AngularBasicsComponent,],
+  declarations: [HomeComponent, LifecyclehooksComponent, ViewchildComponent, ContentprojectionComponent, HostbindingComponent, NgcontainerComponent, RoutingComponent, EmployeelistComponent, EmployeecreateComponent, EmployeeviewComponent, ReactiveformComponent],
   imports: [
     CommonModule,
     AngularRoutingModule,
-    PrismModule,
-    FormsModule,
-    ReactiveFormsModule
+    PrismModule
   ]
 })
 export class AngularModule { }

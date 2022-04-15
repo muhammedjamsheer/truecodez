@@ -1,8 +1,21 @@
 .main-header{
-    background: #455A64;
+    background: #fff;
     height: 56px;
     min-height: 56px;
     padding: 0;
-    color: #fff !important;
+    color: #000 !important;
     box-shadow: 0 2px 5px 0 rgba(0,0,0,0.24);
+}
+.navbar-brand{
+    margin-left: 32px;
+    color: #DC4E44 !important;
+    font-weight: bold;
+}
+.navbar-nav li{
+    padding: 20px;
+    font-weight: bold;
+    cursor: "pointer";
+}
+.active{
+    color: red;;
 }

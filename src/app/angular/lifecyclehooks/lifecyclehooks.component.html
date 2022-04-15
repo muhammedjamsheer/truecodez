@@ -1,0 +1,100 @@
+<div class="container" style="margin-top: 25px;">
+
+
+
+
+
+    <div class="card">
+        <div class="card-body">
+            <h6 class="subheader">1.Constructor</h6>
+            <p>Constructor is not a life cycle . It is a Javascript feature. Constructor
+                method is invoked, when a class is created.</p>
+            <p>Angular makes use of a constructor to inject dependencies.</p>
+
+            <h6 class="subheader">2.ngOnChanges</h6>
+            <p>This method is invoked whenever one or more input properties (@input()) of the component changes</p>
+            <p>The hook receives a SimpleChanges object containing the previous and current values of the property.
+            </p>
+
+            <h6 class="subheader">3.ngOnInit</h6>
+            <p>This event executed at the time of Component initialization. </p>
+            <p>This event is called only once, just after the ngOnChanges() events. </p>
+            <p>This event is mainly used to initialize data in a component.</p>
+            <p>Child components or projected content are not available at this point.</p>
+            <p>Properties decorated with @ViewChild, @ViewChildren , @ContentChild & @ContentChildren will not be
+                available to use</p>
+
+            <h6 class="subheader">4.ngDoCheck</h6>
+            <p>The Angular invokes the ngDoCheck hook event during every change detection cycle.</p>
+            <p>This hook is invoked even if there is no change in any of the properties.</p>
+
+            <p> Angular invokes it after the ngOnChanges & ngOnInit hooks.</p>
+
+            <p> Use this hook to Implement a custom change detection, whenever Angular fails to detect the changes made
+                to Input properties</p>
+
+            <h2></h2>
+            <p> This lifecycle hook is used instead of a ngOnChanges hook, especially when Angular fails to recognize
+                the changes. </p>
+            <p>It gets called after ngOnChanges and ngOnInit and is used to detect and act on changes that cannot be
+                detected by Angular.</p>
+            <p></p>
+            <p>OnChanges does not fire when the input property is an array/object because Angular uses dirty checking to
+                compare the properties.
+                In such a scenario, where Angular fails to detect the changes to the input property, the DoCheck allows
+                us to implement our custom change detection.</p>
+
+            <h6 class="subheader">8. ngOnDestroy</h6>
+            <p>This method will be executed when we want to destroy the Angular components. </p>
+            <p>This method is very useful for unsubscribing the observables and detaching the event handlers to avoid
+                memory leaks.</p>
+
+        </div>
+    </div>
+    <div class="card mt-3">
+        <div class="card-body">
+            <h6 class="subheader">1.ngOnChanges Example</h6>
+            <p><b>ParentComponent.html</b></p>
+            <ngx-prism language="html">
+                {{ngonchanges_parent_html}}
+            </ngx-prism>
+            <p><b>ParentComponent.ts</b></p>
+            <ngx-prism language="javascript">
+                {{ngonchanges_parent_ts}}
+            </ngx-prism>
+
+            <p><b>ChildComponent.html</b></p>
+            <ngx-prism language="html">
+                {{ngonchanges_child_html}}
+            </ngx-prism>
+            <p><b>ChildComponent.ts</b></p>
+            <ngx-prism language="javascript">
+                {{ngonchanges_child_ts}}
+            </ngx-prism>
+            <img [src]="ngochangesimage" width="500px" height="500px">
+        </div>
+    </div>
+    <div class="card mt-3">
+        <div class="card-body">
+            <h6 class="subheader">1.ngDoCheck Example</h6>
+            <p><b>ParentComponent.html</b></p>
+            <ngx-prism language="html">
+                {{ngDoCheck_parent_html}}
+            </ngx-prism>
+            <p><b>ParentComponent.ts</b></p>
+            <ngx-prism language="javascript">
+                {{ngDoCheck_parent_ts}}
+            </ngx-prism>
+
+            <p><b>ChildComponent.html</b></p>
+            <ngx-prism language="html">
+                {{ngDoCheck_child_html}}
+            </ngx-prism>
+            <p><b>ChildComponent.ts</b></p>
+            <ngx-prism language="javascript">
+                {{ngDoCheck_child_ts}}
+            </ngx-prism>
+
+        </div>
+    </div>
+</div>

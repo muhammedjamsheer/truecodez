@@ -1,50 +1,25 @@
 /* You can add global styles to this file, and also import other style files */
  //@import '~prismjs/themes/prism-coy.css';
- //@import '~prismjs/themes/prism-okaidia.css';
- //@import '~prismjs/themes/prism-solarizedlight.css';
+//@import '~prismjs/themes/prism-okaidia.css';
+//@import '~prismjs/themes/prism-solarizedlight.css';
  @import '~prismjs/themes/prism-tomorrow.css';
-//@import '~prismjs/themes/prism-twilight.css';
-//@import '~prismjs/themes/prism.css';
+// @import '~prismjs/themes/prism-twilight.css';
+// @import '~prismjs/themes/prism.css';
 body{
-   background-color: #e6f3f0 ;
+   background-color: #fff ;
    font-size: 15px !important;
    padding-top: 55px;
 }
-.mainlayout{
-    margin: 30px;
+p{
+    color: #6c757d;
+    font-size: 17px;
+    margin: 0 !important;
 }
-.strong{
+.subheader{
+    color: #DC4E44;
+    font-size: 17px; 
     font-weight: bold;
-}
-.pagelayout{
-    margin: 30px 200px;
-    .header{
-        color: #930404;
-        font-weight: bold;
-        font-size: 20px;
-        }
-    .routerLink:hover{
-        cursor: pointer;
-    }
-    h6{
-        margin-top:12px;
-    }
-}
-.card {
-    .card-header h6{
-        font-size: 1.5rem;
-        color: #b00d0d;
-    }
-    .sub_heading{
-        margin: 20px 0px;
-        background-color: #c6d79d;
-        padding: 12px;
-        color: #070707;
-    }
-
+    margin-top: 10px;
 }
 
-.active{
-    background-color: #bcd3b5;
-    color:black !important;
-}
+

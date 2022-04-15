@@ -1,0 +1,90 @@
+<div class="container" style="margin-top: 25px;">
+
+    <h5>ng-container in Angular</h5>
+    <p> ng-container allows us to create a section in a template without introducing a new HTML element.</p>
+    <p>The ng-container does not render in the DOM, but content inside it is rendered.</p>
+    <p> ng-container is very useful Especially when working with structural directives like ngIf, ngFor.</p>
+    <p> we can conditionally append a group of elements in your application (by using ngif) or ng-container Can be used
+        when we required Multiple Structural directives</p>
+    <br>
+    <p class="subheader"> ng-Container with ngFor </p>
+    <ngx-prism language="html">
+        {{ngcontainerngfor}}
+    </ngx-prism>
+    <p class="subheader"> ng-Container with ngIf </p>
+    <ngx-prism language="html">
+        {{ngcontainerngIf}}
+    </ngx-prism>
+    <p class="subheader"> ng-Container with ngSwitch</p>
+    <ngx-prism language="html">
+        {{ngcontainerngSwitch}}
+    </ngx-prism>
+    <br>
+    <h5>ng-template in Angular</h5>
+    <p>The ng-template is an Angular element, which contains the template.and The template does not render itself on
+        DOM.
+        These template elements only work in the presence of structural directives.</p>
+    <br>
+
+    <ngx-prism language="html">
+        {{ngtemplate}}
+    </ngx-prism>
+    <p>There are few ways you can display the template.</p>
+    <p>1.Using the ngTemplateOutlet directive.</p>
+    <p>2.Using the TemplateRef & ViewContainerRef</p>
+    <br>
+    <h5>ngTemplateOutlet in Angular</h5>
+    <p> ngTemplateOutlet is a structural directive. We use it to insert a template (created by ngTemplate) in various
+        sections of our DOM.
+        we can pass data to the template and pass the template to child components.</p>
+    <br>
+    <ngx-prism language="html">
+        {{ngtemplateoutlet}}
+    </ngx-prism>
+    <br>
+    <p class="subheader"> Passing data to ngTemplateOutlet </p>
+    <p>We can pass any value to the value using the ngTemplateOutletContextproperty</p>
+    <ngx-prism language="html">
+        {{ngtemplateoutletpassingdata}}
+    </ngx-prism>
+    <br>
+
+    <p class="subheader">Passing Template to a Child Component</p>
+    <ngx-prism language="html">
+        {{ngtemplateoutletpassingtochildhtml}}
+    </ngx-prism>
+
+    <ngx-prism language="javascript">
+        {{ngtemplateoutletpassingtochildts}}
+    </ngx-prism>
+    <br>
+    <h5>TemplateRef & ViewContainerRef</h5>
+    <p>TemplateRef is a class and the way to reference the ng-template in the component or directive class. Using the
+        TemplateRef we can manipulate the template from component code.</p>
+
+   
+
+    <ngx-prism language="html">
+        {{viewcontainerrefhtml}}
+    </ngx-prism>
+    <P>To access the above ng-template in the component or directive, first, we need to assign a template reference
+        variable. #sayHelloTemplate is that variable.</P>
+    <p>Now, we can use the ViewChild query to inject the sayHelloTemplate into our component as an instance of the class
+        TemplateRef.</p>
+    <ngx-prism language="javascript">
+        {{viewcontainerrefts}}
+    </ngx-prism>
+    <p>Now, we need to tell Angular where to render it. The way to do is to use the ViewContainerRef.</p>
+    <ngx-prism language="javascript">
+        {{viewcontainerreftsappend}}
+    </ngx-prism>
+
+    <P>The template is appended at the bottom.</P>
+
+    <br>
+    <p class="subheader"> ng-template with ngIf, then & else</p>
+    <ngx-prism language="html">
+        {{ngtempstrdirective}}
+    </ngx-prism>
+
+</div>

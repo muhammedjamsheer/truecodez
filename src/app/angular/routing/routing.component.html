@@ -1,0 +1,40 @@
+<div class="container" style="margin-top: 25px;">
+
+    <h5>Angular Routing</h5>
+
+
+    <p class="subheader"> Passing Parameters to Route </p>
+    <P>We can define parameter by adding forward slash followed colon and a placeholder</P>
+    <ngx-prism language="javascript">
+        {{routingparams}}
+    </ngx-prism>
+
+    <p class="subheader">Retrieve the parameter in the component</p>
+    <p>This is done via the <b>ActivatedRoute</b> service from angular/router module to get the parameter value</p>
+    <P>The ActivatedRoute is a service, which keeps track of the currently activated route associated with the loaded
+        Component.</P>
+    <br>
+    <p>To use ActivatedRoute, we need to import it in our component .Then inject it into the component using dependency
+        injection</p>
+    <ngx-prism language="javascript">
+        {{activatedroute}}
+    </ngx-prism>
+
+    <br>
+    <P>There are two ways in which you can use the ActivatedRoute to get the parameter value from the ParamMap object.
+    </P>
+
+    <h6> 1.Using Snapshot</h6>
+    <p>The snapshot property returns the initial value of the route. You can then access the paramsMap array, to access
+        the value of the id</p>
+    <P>We use the Snapshot option, if you only need the initial value.</P>
+    <ngx-prism language="javascript">
+        {{snapshot}}
+    </ngx-prism>
+    <h6> 2.Using observable</h6>
+    <p>You can retrieve the value of id by subscribing to the paramMap observable property of the activateRoute</p>
+    <P>By subscribing to the observable paramMap property, you will retrieve the latest value of the parameter and update the component accordingly.</P>
+    <ngx-prism language="javascript">
+        {{observable}}
+    </ngx-prism>
+</div>

@@ -1,0 +1,49 @@
+<div class="container" style="margin-top: 25px;">
+
+    <h5>Content Projection</h5>
+    <p> We know how to use @Input decorator to pass data from the parent component to the child component.
+        But it is only limited to data. We cannot use that technique to pass the content which includes the HTML
+        elements, CSS, etc to the child component. To do that we have to make use of content projection.</p>
+    <br>
+    <p>Content projection is a way to pass the HTML content from the parent component to the child component. The child
+        component will display the template in a designated spot. We use the ng-content element to designate a spot in
+        the template of the child component. The ng-content also allows us to create multiple slots using the selector
+        attribute. The parent can send different content to each slot.</p>
+    <br>
+    <p class="subheader"> ng-content </p>
+    <p>The ng-content tag acts as a placeholder for inserting external or dynamic content. The Parent component passes
+        the external content to the child component. When Angular parses the template, it inserts the external content
+        where ng-content appears in the child component’s template</p>
+    <br>
+
+    <p> We can use content projection to create a reusable component. The components that have similar logic & layout
+        and can be used in many places in the application.</p>
+    <br>
+    <p class="subheader">ng-content Example </p>
+
+
+    <p><b>ParentComponent.html</b></p>
+    <ngx-prism language="html">
+        {{parentcomponent_html}}
+    </ngx-prism>
+
+    <p>The content between app-child is passed to our parent content. The component displays it in place of ng-content.
+    </p>
+    <br>
+    <p class="subheader">Events</p>
+    <p>The events like click, input, etc bubble up. Hence can be captured in the parent as shown below</p>
+
+    <ngx-prism language="html">
+        {{events}}
+    </ngx-prism>
+
+    <br>
+    <p class="subheader"> Multiple Projections using ng-content</p>
+    <ngx-prism language="html">
+        {{Multiple_Projections}}
+    </ngx-prism>
+    <p>Similarly, you can use the various CSS Selectors as shown below</p>
+    <ngx-prism language="html">
+        {{various_selectors}}
+    </ngx-prism>
+</div>

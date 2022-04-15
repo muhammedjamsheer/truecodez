@@ -1,0 +1,25 @@
+
+
+
+<div class="container" style="margin-top: 50px;">
+    <h6>Employee List</h6>  
+    <button routerLink="create" class="btn btn-info " style="float: right;margin: 10px;">Employee Create</button>
+    <div class='table-responsive'>
+        <table class='table'>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Place</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let emp of employees;">
+                    <td>{{emp.Id}}</td>
+                    <td><a [routerLink]="['view',emp.Id,emp.Name]">{{emp.Name}} </a> </td>
+                    <td>{{emp.Place}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

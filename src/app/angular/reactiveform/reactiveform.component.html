@@ -1,0 +1,57 @@
+<div class="container" style="margin-top: 25px;">
+    <h5>Reactive forms in Angular</h5>
+
+    <p>Reactive forms are forms where we define the structure of the form in the component class. Then, we bind it to
+        the HTML form in the template.</p>
+    <P> This is different from the template-driven forms, where we define the logic and controls in the HTML template.
+    </P>
+    <br>
+    <p> To build reactive forms, first, we need to import ReactiveFormsModule. </p>
+    <p> We then create the Form Model in component class using Form Group, Form Control & Form Arrays</p>
+    <br>
+    <P>The FormControl,FormGroup & FormArray are the three building blocks of the Angular</P>
+    <h6 class="subheader">FormControl </h6>
+    <P>A FormControl represents a single input field in an Angular form and it Tracks the value and validation status of
+        the input field</P>
+    <p>we can use FormControl to set the value of the Form field, find the status of form field like (valid/invalid,
+        pristine/dirty, touched/untouched ) etc & add validation rules to it.</p>
+
+    <h6 class="subheader">FormGroup </h6>
+    <p>FormGroup is a collection of FormControls . Each FormControl is a property in a FormGroup. with the control name
+        as the key.</p>
+    <h6 class="subheader">FormArray </h6>
+    <p>FormArray is an array of form controls. It is similar to FormGroup except for one difference. In FormGroup each
+        FormControl is a property with the control name as the key.</p>
+    <h6 class="subheader">FormBuilder </h6>
+    <P> Angular FormBuilder API makes it easier to build reactive forms. We can easily add the FormGroup, nested
+        FormGroup’s, FormArray’s & FormControls easily. It also allows us to set up the Validation rules for each of the
+        controls.</P>
+
+    <p>It provides shortcuts to create the instance of the FormControl, FormGroup or FormArray. It reduces the code
+        required to write the complex forms.</p>
+
+    <br>
+    <p>We use Angular FormBuilder to create a FormGroup object (form property) which is then bound to the template
+        form element using the formGroup directive</p>
+
+    <ngx-prism language="javascript">
+        {{reactiveformexample_ts}}
+    </ngx-prism>
+
+    <P>We also have getter f to access form controls (form.controls) from the template.</P>
+    <P> For example, we can get username field in the template using f.username instead of form.controls.username.</P>
+
+
+
+
+    FormGroup setValue() and patchValue()
+The setValue() and patchValue() are used to set values to FormGroup instance at run time.
+
+The main difference between them is that when we use setValue(), we have to set all form controls in our FormGroup and when we use patchValue(), then selected form control can be set.
+
+If we use setValue() and won’t set all the form controls in our FormGroup, it will throw an error. 
+
+If we use patchValue(), there is no need to set all the form controls in our FormGroup.
+
+
+</div>

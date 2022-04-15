@@ -7,14 +7,6 @@ const routes: Routes = [
     path: 'angular',
     loadChildren: () => import('./angular/angular.module').then(m => m.AngularModule)
   },
-  {
-    path: 'javascript',
-    loadChildren: () => import('./javascript/javascript.module').then(m => m.JavascriptModule)
-  },
-  {
-    path: 'workspace',
-    loadChildren: () => import('./workspace/workspace.module').then(m => m.WorkspaceModule)
-  }
 ];
 
 @NgModule({

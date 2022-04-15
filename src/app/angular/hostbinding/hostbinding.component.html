@@ -1,0 +1,49 @@
+<div class="container" style="margin-top: 25px;">
+
+    <h5>@HostBinding and @HostListener in Angular</h5>
+    <p> @HostBinding and @HostListener are two decorators in Angular that can be really useful in custom directives.</p>
+    <br>
+    <p class="subheader"> Host Element </p>
+    <p>The host element is the element on which we attach our directive or component.</p>
+    <ngx-prism language="html">
+        {{hostelement}}
+    </ngx-prism>
+    <p> Here the button element is the host element.</p>
+    <br>
+    <p class="subheader">HostBinding </p>
+    <P>Host Binding binds a Host element property to a variable in the directive or component</P>
+    <br>
+    <h6>HostBinding Example</h6>
+
+    <ngx-prism language="javascript">
+        {{bindingdirective}}
+    </ngx-prism>
+    <p>We apply appHighLight directive to a host element ( p in the example) as shown below.</p>
+    <ngx-prism language="html">
+        {{bindingdirectivehtml}}
+    </ngx-prism>
+    <p>Whenever we change the value of the border, the angular will update the border property of the host element.</p>
+
+    <br>
+    <p class="subheader">HostListener </p>
+    <P>HostListener Decorator listens to the DOM event on the host element.</P>
+    <br>
+    <h6>HostListener Example</h6>
+
+    <ngx-prism language="javascript">
+        {{listnerdirective}}
+    </ngx-prism>
+
+    <p> in the following code HostListener listens to the mouseover & mouseleave event. We use the HostListner decorator
+        to decorate functions onMouseOver & onMouseLeave.</p>
+    <br>
+    <p class="subheader">Attaching Classes using HostBinding </p>
+    <p>Attaching a class to the host element is one of the common use cases of the HostBinding decorator.</p>
+
+    <br>
+    <P>For Example the following example adds the highlight & box class to the host element</P>
+    <ngx-prism language="javascript">
+        {{AttachingClasses}}
+    </ngx-prism>
+
+</div>
