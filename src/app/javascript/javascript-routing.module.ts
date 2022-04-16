@@ -5,14 +5,6 @@ import { HomeComponent } from './home/home.component';
 import { VariablesComponent } from './variables/variables.component';
 
 const routes: Routes = [
-  // { path: '', component: HomeComponent },
-  // { path: 'whereto', component: BasicsComponent },
-  // { path: 'output', component: BasicsComponent },
-
-  // { path: 'syntax', component: BasicsComponent },
-  // { path: 'comments', component: BasicsComponent },
-  // { path: 'variables', component: VariablesComponent },
-
   {
     path:'', 
     component: HomeComponent,
@@ -24,7 +16,7 @@ const routes: Routes = [
         path:'comments', component: BasicsComponent
       },
       {
-        path:'syntax', component: BasicsComponent
+        path:'variables', component: VariablesComponent
       }
     ]
   }
