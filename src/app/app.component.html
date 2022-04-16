@@ -6,15 +6,23 @@
 <!-- * * * * * * * * * Delete the template below * * * * * * * * * * -->
 <!-- * * * * * * * to get started with your project! * * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<app-header></app-header>
+<!-- 
 <div class="mainlayout">
-  <router-outlet></router-outlet>
-
-
  
+</div> -->
 
-
+<app-header></app-header>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-3 col-md-6 col-lg-2">
+      <app-sidebar></app-sidebar>
+    </div>
+    <div class="col-sm-9 col-md-6 col-lg-10">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
 </div>
+
 
 <style>
   :host {
@@ -473,10 +481,3 @@
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * End of Placeholder * * * * * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-
-
-
-
-
-
-

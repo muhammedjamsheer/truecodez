@@ -1,21 +1,17 @@
 <nav class="navbar navbar-expand-lg  main-header fixed-top">
-    <a class="navbar-brand" href="#">Truecodez</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <!-- <li class="nav-item">
-        <a class="nav-link" [routerLinkActiveOptions]='exact : true}' routerLink="/">Angular</a>
-        </li> -->
-        <li class="nav-item">
-          <span  routerLinkActive="active" routerLink="/angular">Angular</span>
-        </li>
-        <li class="nav-item">
-          <span  routerLinkActive="active"  routerLink="/javascript">Javascript</span>
-        </li>
-
-      
-      </ul>
-    </div>
-  </nav>
+  <a class="navbar-brand" href="#">Truecodez</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+    aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <span routerLinkActive="active"  (click)="onChangeHeader(3)">Javascript</span>
+      </li>
+      <li class="nav-item">
+        <span routerLinkActive="active" (click)="onChangeHeader(4)">Angular</span>
+      </li>
+    </ul>
+  </div>
+</nav>
