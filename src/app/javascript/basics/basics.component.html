@@ -1,0 +1,73 @@
+<div class="card mt-4">
+    <ng-container *ngIf="mastertype=='whereto'">
+        <div class="card-header">
+            <h5>JavaScript Where To</h5>
+        </div>
+        <div class="card-body">
+
+            <p>In HTML, JavaScript code is inserted between script tags.</p>
+            <ngx-prism language="html">
+                {{codes.whereto_scripttags}}
+            </ngx-prism>
+
+            <p>Scripts can be placed in the body, or in the head section of an HTML page, or in both.</p>
+            <h6 class="subheader">JavaScript in head section</h6>
+            <ngx-prism language="html">
+                {{codes.whereto_headtags}}
+            </ngx-prism>
+
+            <h6 class="subheader">JavaScript in body section</h6>
+            <ngx-prism language="html">
+                {{codes.whereto_bodytags}}
+            </ngx-prism>
+
+            <h6 class="subheader">External JavaScript</h6>
+            <p>Scripts can also be placed in external files:</p>
+            <ul>
+                <li> External scripts are practical when the same code is used in many different web pages.
+                </li>
+                <li> JavaScript files have the file extension .js.</li>
+                <li>To use an external script, put the name of the script file in the src (source) attribute of a script
+                    tag: </li>
+            </ul>
+
+            <ngx-prism language="html">
+                {{codes.whereto_external}}
+            </ngx-prism>
+        </div>
+
+
+    </ng-container>
+
+    <ng-container *ngIf="mastertype=='comments'">
+        <div class="card-header">
+            <h5>JavaScript Comments</h5>
+        </div>
+        <div class="card-body">
+            <!-- <h6 class="subheader">JavaScript in head section</h6> -->
+            <p>JavaScript comments can be used to explain JavaScript code, and to make it more readable. </p>
+            <p>JavaScript comments can also be used to prevent execution, when testing alternative code.
+            </p>
+            <h6 class="subheader">Single Line Comments</h6>
+            <p>Single line comments start with //.</p>
+            
+            <ngx-prism language="html">
+                {{codes.comments_singleline}}
+            </ngx-prism>
+
+            <h6 class="subheader">Multi-line Comments</h6>
+            <p>Multi-line comments start with /* and end with */.</p>
+
+            
+            <ngx-prism language="html">
+                {{codes.comments_multipline}}
+            </ngx-prism>
+        </div>
+
+
+    </ng-container>
+
+    <ng-container *ngIf="mastertype=='syntax'">
+        SYNTx
+    </ng-container>
+</div>

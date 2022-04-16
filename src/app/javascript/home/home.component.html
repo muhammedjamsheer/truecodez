@@ -1,0 +1,12 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-3 col-md-6 col-lg-2">
+            <div class="sidenav">
+                <a *ngFor="let menu of menusdata" routerLinkActive="activemenu" [routerLink]="menu.link">{{menu.label}}</a>
+              </div>
+        </div>
+        <div class="col-sm-9 col-md-6 col-lg-10">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>

@@ -21,5 +21,20 @@ p{
     font-weight: bold;
     margin-top: 10px;
 }
+.card{
+    padding: 20px;
+}
 
-
+.fade {
+    animation: fadeInAnimation ease 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+}
