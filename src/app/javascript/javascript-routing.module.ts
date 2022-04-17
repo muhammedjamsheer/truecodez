@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { BasicsComponent } from './basics/basics.component';
 import { HomeComponent } from './home/home.component';
 import { VariablesComponent } from './variables/variables.component';
+import { StringComponent } from './string/string.component';
 
 const routes: Routes = [
   {
@@ -17,6 +18,12 @@ const routes: Routes = [
       },
       {
         path:'variables', component: VariablesComponent
+      },
+      {
+        path:'datatypes', component: VariablesComponent
+      },
+      {
+        path:'string', component: StringComponent
       }
     ]
   }

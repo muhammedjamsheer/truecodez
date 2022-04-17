@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-variables',
   templateUrl: './variables.component.html',
@@ -7,9 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VariablesComponent implements OnInit {
   codes: any = {}
-  constructor() { }
+  mastertype: string;
+  constructor(private router: Router,) { }
 
   ngOnInit() {
+    this.mastertype = this.router.url;
+    this.mastertype = this.mastertype.split("/").slice(-1)[0];
     this.gethighlihtcodes()
   }
   gethighlihtcodes() {
@@ -53,5 +56,26 @@ const PI = 3.14159265359;
 const PI;
 PI = 3.14159265359;
             `;
+    this.codes.datatype_string = 
+`let carName1 = "Volvo XC60";   // Using double quotes
+ let carName2 = 'Volvo XC60';   // Using single quotes`;
+this.codes.datatype_numbers = 
+`let x1 = 34.00;     // Written with decimals
+ let x2 = 34;        // Written without decimals`;
+  this.codes.datatype_booleans = 
+`let x1 = true;   
+ let x2 = false;  `;
+this.codes.datatype_arrays = 
+`const cars = ["Saab", "Volvo", "BMW"];`;
+this.codes.datatype_objects = 
+`const person = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"};`;
+this.codes.typeofoperater = 
+`typeof ""             // Returns "string"
+ typeof "John"         // Returns "string"
+ typeof "John Doe"     // Returns "string"  
+ typeof 0              // Returns "number"
+ typeof 314            // Returns "number"`;
+ this.codes.undefined = 
+`let car;    // Value is undefined, type is undefined`;
   }
 }

@@ -1,0 +1,104 @@
+<div class="card mt-4 ">
+    <div class="card-header">
+        <h5>JavaScript Strings</h5>
+    </div>
+    <div class="card-body">
+        <div class="subheader">String length</div>
+        <p>The length property returns the length of a string.</p>
+        <ngx-prism language="javascript">
+            {{codes.string_length}}
+        </ngx-prism>
+
+        <hr>
+
+        <div class="subheader">Extracting String Parts</div>
+        <p>There are 3 methods for extracting a part of a string:</p>
+
+        <ul>
+            <li>slice (start, end)</li>
+            <li>substring (start, end)</li>
+            <li>substr (start, length)</li>
+        </ul>
+
+        <h6>JavaScript String slice()</h6>
+        <p>slice() extracts a part of a string and returns the extracted part in a new string.</p>
+        <p>The method takes 2 parameters: the start position, and the end position (end not included).</p>
+        <p>JavaScript counts positions from zero .First position is 0.Second position is 1.</p>
+
+        <ngx-prism language="javascript">
+            {{codes.string_slice}}
+        </ngx-prism>
+
+
+        <h6>JavaScript String substring()</h6>
+        <p>substring() is similar to slice().The difference is that substring() cannot accept negative indexes.</p>
+
+        <ngx-prism language="javascript">
+            {{codes.string_substring}}
+        </ngx-prism>
+
+        <h6>JavaScript String substr()</h6>
+        <p>substr() is similar to slice().The difference is that the second parameter specifies the length of the extracted part..</p>
+
+        <ngx-prism language="javascript">
+            {{codes.string_substr}}
+        </ngx-prism>
+
+        <hr>
+        <div class="subheader">Replacing String Content</div>
+        <p>The replace() method replaces a specified value with another value in a string:</p>
+
+        <ngx-prism language="javascript">
+            {{codes.string_replace}}
+        </ngx-prism>
+
+
+        <hr>
+        <div class="subheader">Converting to Upper and Lower Case</div>
+        <p>A string is converted to upper case with toUpperCase():</p>
+        <p>A string is converted to lower case with toLowerCase():</p>
+
+        <ngx-prism language="javascript">
+            {{codes.string_uppercase_lowercase}}
+        </ngx-prism>
+
+
+        <hr>
+        <div class="subheader">JavaScript String concat()</div>
+        <p>concat() joins two or more strings:</p>
+
+        <ngx-prism language="javascript">
+            {{codes.string_concat}}
+        </ngx-prism>
+
+        <hr>
+        <div class="subheader">JavaScript String trim()</div>
+        <p>The trim() method removes whitespace from both sides of a string:</p>
+
+        <ngx-prism language="javascript">
+            {{codes.trim}}
+        </ngx-prism>
+
+
+        <hr>
+        <div class="subheader">Extracting String Characters</div>
+        <p>The charAt() method returns the character at a specified index (position) in a string:</p>
+
+        <ngx-prism language="javascript">
+            {{codes.charat}}
+        </ngx-prism>
+
+
+        <hr>
+        <div class="subheader">Converting a String to an Array</div>
+        <p>A string can be converted to an array with the split() method:</p>
+
+        <ngx-prism language="javascript">
+            {{codes.split}}
+        </ngx-prism>
+
+
+
+
+    </div>
+</div>

@@ -1,60 +1,134 @@
-<div class="card mt-4">
-    <div class="card-header">
-        <h5>JavaScript Variables</h5>
+<ng-container *ngIf="mastertype=='variables'">
+    <div class="card mt-4 ">
+        <div class="card-header">
+            <h5>JavaScript Variables</h5>
+        </div>
+        <div class="card-body">
+            <p>Variables are containers for storing data (storing data values).</p>
+            <p>we can declare javascript variables in 3 types <b>var</b>, <b>let</b> ,<b>const</b></p>
+
+            <div class="subheader">Var</div>
+            <p>It is the oldest keyword to declare a variable in js</p>
+            <p>Variables declared with var are in the function scope and can be Redeclared.</p>
+
+            <div class="subheader">Let</div>
+            <p>The let keyword was introduced in ES6 (2015)</p>
+            <p>Variables declared with let have Block Scope ie, Variables declared inside a curly brace cannot be
+                accessed
+                from outside the block.</p>
+            <p>Variables declared with let cannot be Redeclared and must be declared before use.</p>
+
+            <div class="subheader">Const</div>
+            <p>The let keyword was introduced in ES6 (2015)</p>
+            <p>Variables declared with const have Block Scope.</p>
+            <p>JavaScript const variables must be assigned a value when they are declared:</p>
+            <p>Variables declared with Const cannot be Redeclared and const cannot be Reassigned.</p>
+
+            <hr>
+            <div class="subheader">Cannot be Redeclared</div>
+            <p>Variables defined with let and const cannot be redeclared.</p>
+            <ngx-prism language="javascript">
+                {{codes.let_redeclare}}
+            </ngx-prism>
+            <p>With var you can:</p>
+            <ngx-prism language="javascript">
+                {{codes.var_redeclare}}
+            </ngx-prism>
+
+            <div class="subheader">Block Scope</div>
+            <p>Let and Const are block scoped</p>
+            <p>Variables declared inside a curly brace cannot be accessed from outside the block:</p>
+            <ngx-prism language="javascript">
+                {{codes.let_blockscope}}
+            </ngx-prism>
+            <p>Redeclaring a variable inside a block will not redeclare the variable outside the block:</p>
+            <ngx-prism language="javascript">
+                {{codes.let_blockscope2}}
+            </ngx-prism>
+
+            <div class="subheader"> Cannot be Reassigned</div>
+            <p>A const variable cannot be reassigned:</p>
+            <ngx-prism language="javascript">
+                {{codes.const_reassigned}}
+            </ngx-prism>
+
+            <p>JavaScript const variables must be assigned a value when they are declared:</p>
+            <ngx-prism language="javascript">
+                {{codes.const_assigned}}
+            </ngx-prism>
+
+        </div>
     </div>
-    <div class="card-body">
-        <p>Variables are containers for storing data (storing data values).</p>
-        <p>we can declare javascript variables in 3 types <b>var</b>, <b>let</b> ,<b>const</b></p>
-
-        <div class="subheader">Var</div>
-        <p>It is the oldest keyword to declare a variable in js</p>
-        <p>Variables declared with var are in the function scope and can be Redeclared.</p>
-
-        <div class="subheader">Let</div>
-        <p>The let keyword was introduced in ES6 (2015)</p>
-        <p>Variables declared with let have Block Scope ie, Variables declared inside a curly brace cannot be accessed
-            from outside the block.</p>
-        <p>Variables declared with let cannot be Redeclared and must be declared before use.</p>
-
-        <div class="subheader">Const</div>
-        <p>The let keyword was introduced in ES6 (2015)</p>
-        <p>Variables declared with const have Block Scope.</p>
-        <p>JavaScript const variables must be assigned a value when they are declared:</p>
-        <p>Variables declared with Const cannot be Redeclared and const cannot be Reassigned.</p>
-
-        <hr>
-        <div class="subheader">Cannot be Redeclared</div>
-        <p>Variables defined with let and const cannot be redeclared.</p>
-        <ngx-prism language="javascript">
-            {{codes.let_redeclare}}
-        </ngx-prism>
-        <p>With var you can:</p>
-        <ngx-prism language="javascript">
-            {{codes.var_redeclare}}
-        </ngx-prism>
-
-        <div class="subheader">Block Scope</div>
-        <p>Let and Const are block scoped</p>
-        <p>Variables declared inside a curly brace cannot be accessed from outside the block:</p>
-        <ngx-prism language="javascript">
-            {{codes.let_blockscope}}
-        </ngx-prism>
-        <p>Redeclaring a variable inside a block will not redeclare the variable outside the block:</p>
-        <ngx-prism language="javascript">
-            {{codes.let_blockscope2}}
-        </ngx-prism>
-
-        <div class="subheader"> Cannot be Reassigned</div>
-        <p>A const variable cannot be reassigned:</p>
-        <ngx-prism language="javascript">
-            {{codes.const_reassigned}}
-        </ngx-prism>
-
-        <p>JavaScript const variables must be assigned a value when they are declared:</p>
-        <ngx-prism language="javascript">
-            {{codes.const_assigned}}
-        </ngx-prism>
+</ng-container>
 
 
+<ng-container *ngIf="mastertype=='datatypes'">
+    <div class="card mt-4 ">
+        <div class="card-header">
+            <h5>JavaScript Datatypes</h5>
+        </div>
+        <div class="card-body">
+            <p>JavaScript variables can hold different data types: numbers, strings, objects and more:</p>
+
+            <h6 class="subheader">JavaScript Strings</h6>
+            <p>A string (or a text string) is a series of characters like "John Doe".</p>
+
+            <p> Strings are written with quotes. You can use single or double quotes:</p>
+
+            <ngx-prism language="javascript">
+                {{codes.datatype_string}}
+            </ngx-prism>
+
+            <hr>
+
+            <h6 class="subheader">JavaScript Numbers</h6>
+            <p>JavaScript has only one type of numbers.</p>
+
+            <p>Numbers can be written with, or without decimals:</p>
+
+            <ngx-prism language="javascript">
+                {{codes.datatype_numbers}}
+            </ngx-prism>
+
+            <hr>
+            <h6 class="subheader">JavaScript Booleans</h6>
+            <p>Booleans can only have two values: true or false.</p>
+
+            <ngx-prism language="javascript">
+                {{codes.datatype_booleans}}
+            </ngx-prism>
+            <hr>
+            <h6 class="subheader">JavaScript Arrays</h6>
+            <p>JavaScript arrays are written with square brackets.</p>
+            <p>Array items are separated by commas.</p>
+
+            <ngx-prism language="javascript">
+                {{codes.datatype_arrays}}
+            </ngx-prism>
+            <hr>
+            <h6 class="subheader">JavaScript Objects</h6>
+            <p>JavaScript objects are written with curly braces</p>
+            <p>Object properties are written as name:value pairs, separated by commas.</p>
+
+            <ngx-prism language="javascript">
+                {{codes.datatype_objects}}
+            </ngx-prism>
+            <hr>
+
+            <h6 class="subheader">The typeof Operator</h6>
+            <p>You can use the JavaScript typeof operator to find the type of a JavaScript variable.</p>
+
+            <ngx-prism language="javascript">
+                {{codes.typeofoperater}}
+            </ngx-prism>
+            <hr>
+            <h6 class="subheader">Undefined</h6>
+            <p>In JavaScript, a variable without a value, has the value undefined. The type is also undefined.</p>
+
+            <ngx-prism language="javascript">
+                {{codes.undefined}}
+            </ngx-prism>
+
+        </div>
     </div>
-</div>
+</ng-container>
