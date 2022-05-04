@@ -134,8 +134,43 @@ this.codes.split =
 text.split(",")    // Split on commas
 text.split(" ")    // Split on spaces
 text.split("|")    // Split on pipe`;
+this.codes.search_indexof =
+`let str = "Please locate where 'locate' occurs!";
+ let index = str.indexOf("locate");
  
+ //console.log(index) --> 7`; 
 
+ this.codes.search_lastindexof =
+`let str = "Please locate where 'locate' occurs!";
+ let index = str.lastIndexOf("locate");
+ 
+ //console.log(index) --> 21`; 
+
+ this.codes.search_search =
+`let str = "Please locate where 'locate' occurs!";
+ let index = str.search("locate");
+  
+ //console.log(index) --> 7`; 
+
+
+ this.codes.search_includes =
+`let text = "Hello world, welcome to the universe.";
+ let index = text.includes("world");
+   
+ //console.log(index) --> true`; 
+  
+ this.codes.search_startsWith =
+`let text = "Hello world, welcome to the universe.";
+ let index = text.startsWith("Hello");
+    
+  //console.log(index) --> true`;
+
+  this.codes.search_endsWith =
+`let text = "Hello world, welcome to the universe.";
+ let index = text.startsWith("universe");
+      
+ //console.log(index) --> true`;
+  ;
  
  
  ;

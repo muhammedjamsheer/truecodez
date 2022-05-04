@@ -11,7 +11,11 @@ export class HomeComponent implements OnInit {
     { id: 2, type: 3, label: "Comments", link: "/javascript/comments" },
     { id: 3, type: 3, label: " JS Variables", link: "/javascript/variables" },
     { id: 3, type: 3, label: " JS Data Types", link: "/javascript/datatypes" },
-    { id: 3, type: 3, label: " JS String", link: "/javascript/string" }
+    { id: 3, type: 3, label: " JS String Methods", link: "/javascript/string" },
+    { id: 3, type: 3, label: " JS String Search", link: "/javascript/string-search" },
+    { id: 3, type: 3, label: " JS Number Methods", link: "/javascript/numbers" },
+    { id: 3, type: 3, label: " JS Arrays", link: "/javascript/arrays" },
+    { id: 3, type: 3, label: " JS Arrays Iteration", link: "/javascript/arraysiteration" }
   ]
   constructor() { }
 

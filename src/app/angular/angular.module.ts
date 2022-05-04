@@ -13,10 +13,11 @@ import { EmployeelistComponent } from './employees/employeelist/employeelist.com
 import { EmployeecreateComponent } from './employees/employeecreate/employeecreate.component';
 import { EmployeeviewComponent } from './employees/employeeview/employeeview.component';
 import { ReactiveformComponent } from './reactiveform/reactiveform.component';
+import { DatabindingComponent } from './databinding/databinding.component';
 
 
 @NgModule({
-  declarations: [HomeComponent, LifecyclehooksComponent, ViewchildComponent, ContentprojectionComponent, HostbindingComponent, NgcontainerComponent, RoutingComponent, EmployeelistComponent, EmployeecreateComponent, EmployeeviewComponent, ReactiveformComponent],
+  declarations: [HomeComponent, LifecyclehooksComponent, ViewchildComponent, ContentprojectionComponent, HostbindingComponent, NgcontainerComponent, RoutingComponent, EmployeelistComponent, EmployeecreateComponent, EmployeeviewComponent, ReactiveformComponent, DatabindingComponent],
   imports: [
     CommonModule,
     AngularRoutingModule,

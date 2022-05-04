@@ -1,0 +1,124 @@
+<div *ngIf="mastertype=='arrays'" class="card mt-4 ">
+    <div class="card-header">
+        <h5>JavaScript Arrays</h5>
+    </div>
+    <div class="card-body">
+        <p>An array is a special variable, which can hold more than one value:</p>
+        <ngx-prism language="javascript">
+            {{codes.arrays_example}}
+        </ngx-prism>
+        <p>It is a common practice to declare arrays with the const keyword.</p>
+        <p>You can also create an array, and then provide the elements:</p>
+        <ngx-prism language="javascript">
+            {{codes.arrays_create}}
+        </ngx-prism>
+        <hr>
+        <div class="subheader">Changing an Array Element</div>
+        <p>You access an array element by referring to the index number:</p>
+        <ngx-prism language="javascript">
+            {{codes.arrays_changeelement}}
+        </ngx-prism>
+
+        <div class="subheader">The length Property</div>
+        <p>The length property of an array returns the length of an array (the number of array elements).</p>
+        <ngx-prism language="javascript">
+            {{codes.arrays_length}}
+        </ngx-prism>
+
+        <div class="subheader">Accessing Array Elements</div>
+        <p>You access an array element by referring to the index number:</p>
+        <ngx-prism language="javascript">
+            {{codes.arrays_access}}
+        </ngx-prism>
+
+
+        <div class="subheader"> Converting Arrays to Strings</div>
+        <p>The JavaScript method toString() converts an array to a string of (comma separated) array values.</p>
+        <ngx-prism language="javascript">
+            {{codes.arrays_Converting }}
+        </ngx-prism>
+
+        <p>The join() method also joins all array elements into a string.</p>
+        <p>It behaves just like toString(), but in addition you can specify the separator:</p>
+        <ngx-prism language="javascript">
+            {{codes.arrays_Convertingjoin }}
+        </ngx-prism>
+
+        <div class="subheader"> Popping and Pushing</div>
+        <p>The pop() method removes the last element from an array</p>
+        <p>The push() method adds a new element to an array (at the end):</p>
+        <ngx-prism language="javascript">
+            {{codes.arrays_pushpop }}
+        </ngx-prism>
+
+        <div class="subheader"> Shift and Unshift</div>
+        <p>The shift() method removes the first array element</p>
+        <p>The unshift() method adds a new element to an array (at the beginning):</p>
+        <ngx-prism language="javascript">
+            {{codes.arrays_shiftunshift }}
+        </ngx-prism>
+
+        <div class="subheader"> Merging (Concatenating) Arrays</div>
+        <p>The concat() method creates a new array by merging (concatenating) existing arrays:</p>
+        <ngx-prism language="javascript">
+            {{codes.arrays_Concatenating }}
+        </ngx-prism>
+
+        <p>The concat() method does not change the existing arrays. It always returns a new array.</p>
+        <p>The concat() method can take any number of array arguments:</p>
+        <h6>Example (Merging Three Arrays)</h6>
+        <ngx-prism language="javascript">
+            {{codes.arrays_Concatenating2 }}
+        </ngx-prism>
+
+        <p>The concat() method can also take strings as arguments:</p>
+        <ngx-prism language="javascript">
+            {{codes.arrays_Concatenating3 }}
+        </ngx-prism>
+
+
+        <div class="subheader"> JavaScript Array splice()</div>
+        <p>The splice() method adds new items to an array.</p>
+        <ngx-prism language="javascript">
+            {{codes.arrays_splice }}
+        </ngx-prism>
+
+        <h6>Using splice() to Remove Elements</h6>
+
+        <ngx-prism language="javascript">
+            {{codes.arrays_spliceremove }}
+        </ngx-prism>
+
+
+        <div class="subheader"> JavaScript Array slice()</div>
+        <p>The slice() method slices out a piece of an array into a new array.</p>
+        <p>The slice() method creates a new array.
+
+            The slice() method does not remove any elements from the source array.</p>
+        <p></p>
+        <p>When the slice() method is given two arguments, it selects array elements from the start argument, and up to
+            (but not included) the end argument:</p>
+        <ngx-prism language="javascript">
+            {{codes.arrays_slice1 }}
+        </ngx-prism>
+
+        <p>If the end argument is omitted,the slice() method slices out the rest of the array.</p>
+        <ngx-prism language="javascript">
+            {{codes.arrays_slice2 }}
+        </ngx-prism>
+    </div>
+</div>
+
+
+<div *ngIf="mastertype=='arraysiteration'" class="card mt-4 ">
+    <div class="card-header">
+        <h5>JavaScript Array Iteration</h5>
+    </div>
+    <div class="card-body">
+        <p>An array is a special variable, which can hold more than one value:</p>
+        <ngx-prism language="javascript">
+            {{codes.arrays_example}}
+        </ngx-prism>
+
+    </div>
+</div>

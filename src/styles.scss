@@ -1,10 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
 //  @import '~prismjs/themes/prism-coy.css';
-@import '~prismjs/themes/prism-okaidia.css';
-// @import '~prismjs/themes/prism-solarizedlight.css';
-//  @import '~prismjs/themes/prism-tomorrow.css';
+//@import '~prismjs/themes/prism-okaidia.css';
+ //@import '~prismjs/themes/prism-solarizedlight.css';
+//    @import '~prismjs/themes/prism-tomorrow.css';
  //@import '~prismjs/themes/prism-twilight.css';
-// @import '~prismjs/themes/prism.css';
+ @import '~prismjs/themes/prism.css';
 body{
    background-color: #fff ;
    font-size: 15px !important;
@@ -14,6 +14,12 @@ p{
     color: #6c757d;
     font-size: 17px;
     margin: 0 !important;
+}
+.header{
+    color: #4a100c;
+    font-size: 19px; 
+    font-weight: bold;
+    margin-top: 10px;
 }
 .subheader{
     color: #DC4E44;
@@ -25,7 +31,7 @@ p{
     padding: 20px;
 }
 
-.fade {
+.fadepage {
     animation: fadeInAnimation ease 3s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
@@ -37,4 +43,21 @@ p{
     50% {
         opacity: 1;
     }
+}
+.tabsection{
+    border: 1px solid #ccc;
+    margin-top: 5px;
+    padding: 5px;
+    border-radius: 5px;
+}
+.tabsection ul{
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+}
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    color: #fff;
+    background-color: #850c17;
+}
+.redcolor{
+    color: red;
 }

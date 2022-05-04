@@ -11,11 +11,15 @@ import { NgcontainerComponent } from './ngcontainer/ngcontainer.component';
 import { RoutingComponent } from './routing/routing.component';
 import { ViewchildComponent } from './viewchild/viewchild.component';
 import { ReactiveformComponent } from './reactiveform/reactiveform.component';
-
+import { DatabindingComponent } from './databinding/databinding.component';
 
 
 const routes: Routes = [
   { path: '', redirectTo: "home", pathMatch: "prefix" },
+  { path: 'databinding', component: DatabindingComponent },
+
+
+
   { path: 'home', component: HomeComponent },
   { path: 'lifecyclehooks', component: LifecyclehooksComponent },
   { path: 'viewchild', component: ViewchildComponent },

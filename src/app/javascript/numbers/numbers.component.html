@@ -1,0 +1,46 @@
+<div *ngIf="mastertype=='numbers'" class="card mt-4 ">
+    <div class="card-header">
+        <h5>JavaScript Numbers</h5>
+    </div>
+    <div class="card-body">
+        <div class="subheader">The toString() Method</div>
+        <p>The toString() method returns a number as a string.</p>
+        <ngx-prism language="javascript">
+            {{codes.number_toString}}
+        </ngx-prism>
+        <hr>
+
+        <div class="subheader">The toFixed() Method</div>
+        <p>toFixed() returns a string, with the number written with a specified number of decimals:</p>
+        <ngx-prism language="javascript">
+            {{codes.number_toFixed}}
+        </ngx-prism>
+
+        <hr>
+
+
+        <div class="subheader">Converting Variables to Numbers</div>
+        <p>There are 3 JavaScript methods that can be used to convert variables to numbers: </p>
+
+        <ol>
+            <lI>The Number() method</lI>
+            <lI>The parseInt() method</lI>
+            <lI>The parseFloat() method</lI>
+        </ol>
+
+        <h6>The Number() Method</h6>
+        <p>Number() can be used to convert JavaScript variables to numbers:</p>
+        <ngx-prism language="javascript">
+            {{codes.number_numbermethod}}
+        </ngx-prism>
+
+        <h6>The parseInt() Method</h6>
+        <p>parseInt() parses a string and returns a whole number. Spaces are allowed. Only the first number is returned:</p>
+        <ngx-prism language="javascript">
+            {{codes.number_parseintmethod}}
+        </ngx-prism>
+
+        <hr>
+
+    </div>
+</div>

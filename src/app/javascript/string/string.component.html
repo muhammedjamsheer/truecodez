@@ -1,4 +1,4 @@
-<div class="card mt-4 ">
+<div *ngIf="mastertype=='string'" class="card mt-4 ">
     <div class="card-header">
         <h5>JavaScript Strings</h5>
     </div>
@@ -38,7 +38,8 @@
         </ngx-prism>
 
         <h6>JavaScript String substr()</h6>
-        <p>substr() is similar to slice().The difference is that the second parameter specifies the length of the extracted part..</p>
+        <p>substr() is similar to slice().The difference is that the second parameter specifies the length of the
+            extracted part..</p>
 
         <ngx-prism language="javascript">
             {{codes.string_substr}}
@@ -100,5 +101,58 @@
 
 
 
+    </div>
+</div>
+
+
+<div *ngIf="mastertype=='string-search'" class="card mt-4 ">
+    <div class="card-header">
+        <h5>JavaScript String Search</h5>
+    </div>
+    <div class="card-body">
+        <div class="subheader">JavaScript String indexOf()</div>
+        <p>The indexOf() method returns the index of (the position of) the first occurrence of a specified text in a
+            string.</p>
+        <ngx-prism language="javascript">
+            {{codes.search_indexof}}
+        </ngx-prism>
+        <hr>
+
+        <div class="subheader">JavaScript String lastIndexOf()</div>
+        <p>The lastIndexOf() method returns the index of the last occurrence of a specified text in a string.</p>
+        <ngx-prism language="javascript">
+            {{codes.search_lastindexof}}
+        </ngx-prism>
+
+        <p>Both indexOf(), and lastIndexOf() return -1 if the text is not found:</p>
+        <hr>
+
+        <div class="subheader">JavaScript String search()</div>
+        <p>The search() method searches a string for a specified value and returns the position of the match:</p>
+        <ngx-prism language="javascript">
+            {{codes.search_search}}
+        </ngx-prism>
+        <hr>
+
+        <div class="subheader">JavaScript String includes()</div>
+        <p>The includes() method returns true if a string contains a specified value.</p>
+        <ngx-prism language="javascript">
+            {{codes.search_includes}}
+        </ngx-prism>
+        <hr>
+
+        <div class="subheader">JavaScript String startsWith()</div>
+        <p>The startsWith() method returns true if a string begins with a specified value, otherwise false:</p>
+        <ngx-prism language="javascript">
+            {{codes.search_startsWith}}
+        </ngx-prism>
+        <hr>
+
+        <div class="subheader">JavaScript String endsWith()</div>
+        <p>The endsWith() method returns true if a string ends with a specified value, otherwise false:</p>
+        <ngx-prism language="javascript">
+            {{codes.search_endsWith}}
+        </ngx-prism>
+        <hr>
     </div>
 </div>
