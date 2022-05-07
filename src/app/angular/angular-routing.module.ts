@@ -11,12 +11,14 @@ import { NgcontainerComponent } from './ngcontainer/ngcontainer.component';
 import { RoutingComponent } from './routing/routing.component';
 import { ViewchildComponent } from './viewchild/viewchild.component';
 import { ReactiveformComponent } from './reactiveform/reactiveform.component';
-import { DatabindingComponent } from './databinding/databinding.component';
 
+import { DatabindingComponent } from './databinding/databinding.component';
+import { DirectivesComponent } from './directives/directives.component';
 
 const routes: Routes = [
   { path: '', redirectTo: "home", pathMatch: "prefix" },
   { path: 'databinding', component: DatabindingComponent },
+  { path: 'directives', component: DirectivesComponent },
 
 
 
