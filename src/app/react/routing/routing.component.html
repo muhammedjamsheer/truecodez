@@ -1,0 +1,163 @@
+<div style="margin: 20px 200px;background: #f8f9fa;padding: 20px;">
+    <div>
+        <h5><span class="mainheader"> Routing in React </span></h5>
+    </div>
+    <div class="body">
+        <p> we install router dom in react for routing</p>
+        <ngx-prism language="javascript">
+            {{codes.istall_routing}}
+        </ngx-prism>
+
+        <h6 class="subheader">Simple Routing</h6>
+        <div class="tabsection">
+            <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-1" role="tab"
+                        aria-controls="pills-home" aria-selected="true">app.js</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-2" role="tab"
+                        aria-controls="pills-profile" aria-selected="false">header.js</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-3" role="tab"
+                        aria-controls="pills-profile" aria-selected="false">header.css</a>
+                </li>
+            </ul>
+            <div class="tab-content" id="pills-tabContent">
+                <div class="tab-pane fade show active" id="pills-1" role="tabpanel" aria-labelledby="pills-home-tab">
+                    <ngx-prism language="javascript">
+                        {{codes.routersimple_appjs}}
+                    </ngx-prism>
+                </div>
+                <div class="tab-pane fade" id="pills-2" role="tabpanel" aria-labelledby="pills-profile-tab">
+                    <ngx-prism language="javascript">
+                        {{codes.routersimple_nabbar}}
+                    </ngx-prism>
+                </div>
+                <div class="tab-pane fade" id="pills-3" role="tabpanel" aria-labelledby="pills-profile-tab">
+                    <ngx-prism language="css">
+                        {{codes.routersimple_headercss}}
+                    </ngx-prism>
+                </div>
+            </div>
+        </div>
+
+
+        <h6 class="subheader">Routing with Url Parameters</h6>
+        <div class="tabsection">
+            <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-4" role="tab"
+                        aria-controls="pills-home" aria-selected="true">app.js</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-5" role="tab"
+                        aria-controls="pills-profile" aria-selected="false">User.js</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-6" role="tab"
+                        aria-controls="pills-profile" aria-selected="false">Userdetails.js</a>
+                </li>
+            </ul>
+            <div class="tab-content" id="pills-tabContent">
+                <div class="tab-pane fade show active" id="pills-4" role="tabpanel" aria-labelledby="pills-home-tab">
+                    <ngx-prism language="javascript">
+                        {{codes.router_urlparam_appjs}}
+                    </ngx-prism>
+                </div>
+                <div class="tab-pane fade" id="pills-5" role="tabpanel" aria-labelledby="pills-profile-tab">
+                    <ngx-prism language="javascript">
+                        {{codes.router_urlparam_userjs}}
+                    </ngx-prism>
+                </div>
+                <div class="tab-pane fade" id="pills-6" role="tabpanel" aria-labelledby="pills-profile-tab">
+                    <ngx-prism language="css">
+                        {{codes.router_urlparam_userdetailsjs}}
+                    </ngx-prism>
+                </div>
+            </div>
+        </div>
+
+
+        <h6 class="subheader">Routing with Serch Parameters</h6>
+        <div class="tabsection">
+            <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-7" role="tab"
+                        aria-controls="pills-home" aria-selected="true">app.js</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-8" role="tab"
+                        aria-controls="pills-profile" aria-selected="false">User.js</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-9" role="tab"
+                        aria-controls="pills-profile" aria-selected="false">Userdetails.js</a>
+                </li>
+            </ul>
+            <div class="tab-content" id="pills-tabContent">
+                <div class="tab-pane fade show active" id="pills-7" role="tabpanel" aria-labelledby="pills-home-tab">
+                    <ngx-prism language="javascript">
+                        {{codes.router_searchparam_appjs}}
+                    </ngx-prism>
+                </div>
+                <div class="tab-pane fade" id="pills-8" role="tabpanel" aria-labelledby="pills-profile-tab">
+                    <ngx-prism language="javascript">
+                        {{codes.router_searchparam_userjs}}
+                    </ngx-prism>
+                </div>
+                <div class="tab-pane fade" id="pills-9" role="tabpanel" aria-labelledby="pills-profile-tab">
+                    <ngx-prism language="css">
+                        {{codes.router_searchparam_userinfojs}}
+                    </ngx-prism>
+                </div>
+            </div>
+        </div>
+        <h6 class="subheader">Routing with navigate function</h6>
+        <ngx-prism language="javascript">
+            {{codes.router_navigatefn}}
+        </ngx-prism>
+
+
+
+        
+        <h6 class="subheader">Routing with navigate function and passing parameter through url</h6>
+        <div class="tabsection">
+            <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-10" role="tab"
+                        aria-controls="pills-home" aria-selected="true">app.js</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-11" role="tab"
+                        aria-controls="pills-profile" aria-selected="false">User.js</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-12" role="tab"
+                        aria-controls="pills-profile" aria-selected="false">Userdata.js</a>
+                </li>
+            </ul>
+            <div class="tab-content" id="pills-tabContent">
+                <div class="tab-pane fade show active" id="pills-10" role="tabpanel" aria-labelledby="pills-home-tab">
+                    <ngx-prism language="javascript">
+                        {{codes.router_navigationfn_appjs}}
+                    </ngx-prism>
+                </div>
+                <div class="tab-pane fade" id="pills-11" role="tabpanel" aria-labelledby="pills-profile-tab">
+                    <ngx-prism language="javascript">
+                        {{codes.router_navigationfn_userjs}}
+                    </ngx-prism>
+                </div>
+                <div class="tab-pane fade" id="pills-12" role="tabpanel" aria-labelledby="pills-profile-tab">
+                    <ngx-prism language="css">
+                        {{codes.router_navigationfn_userinfojs}}
+                    </ngx-prism>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+</div>
