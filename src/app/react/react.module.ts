@@ -6,10 +6,11 @@ import { HomeComponent } from './home/home.component';
 import { UsestateComponent } from './usestate/usestate.component';
 import { UseeffectComponent } from './useeffect/useeffect.component';
 import { RoutingComponent } from './routing/routing.component';
+import { PropsComponent } from './props/props.component';
 
 
 @NgModule({
-  declarations: [HomeComponent, UsestateComponent, UseeffectComponent, RoutingComponent],
+  declarations: [HomeComponent, UsestateComponent, UseeffectComponent, RoutingComponent, PropsComponent],
   imports: [
     CommonModule,
     ReactRoutingModule,

@@ -4,7 +4,7 @@ import { HomeComponent } from './home/home.component';
 import { UsestateComponent } from './usestate/usestate.component';
 import { UseeffectComponent } from './useeffect/useeffect.component';
 import { RoutingComponent } from './routing/routing.component';
-
+import { PropsComponent } from './props/props.component';
 
 const routes: Routes = [
   { path: '', redirectTo: "home", pathMatch: "prefix" },
@@ -12,6 +12,7 @@ const routes: Routes = [
   { path: 'usestate', component: UsestateComponent },
   { path: 'useeffect', component: UseeffectComponent },
   { path: 'routing', component: RoutingComponent },
+  { path: 'props', component: PropsComponent },
 ];
 
 @NgModule({
